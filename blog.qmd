@@ -1,5 +1,5 @@
 ---
-title: "Quarto Blog"
+title: "Dash from Plotly"
 listing:
   contents: posts
   sort: "date desc"

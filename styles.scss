@@ -1,9 +1,16 @@
 /*-- scss:defaults --*/
 
-@import 'https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap';
+/* Import the Montserrat font */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
-$font-family: "Roboto", sans-serif;
-$font-family-serif: "Roboto", sans-serif;
+/* Apply the font to the body and other elements as needed */
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Example of applying the font to specific elements */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
 
 /*-- scss:rules --*/
 kbd,

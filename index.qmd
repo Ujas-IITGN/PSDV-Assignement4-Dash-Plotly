@@ -1,5 +1,6 @@
 ---
-title: Quarto Template
+title: Dash from PLotly
 ---
 
-Quarto template Text!
+Welcome to the blog introducing Dash to beginners. Hope it helps!!!
+Happy learning!!!
