@@ -18,7 +18,7 @@ website:
 format:
   html:
     theme:
-      light: [lumen, styles.scss]
+      light: [cerulean, styles.scss]
     highlight-style: a11y-dark
     mainfont: "Montserrat"
     code-copy: true
