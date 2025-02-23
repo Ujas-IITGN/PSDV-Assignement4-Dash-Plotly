@@ -197,6 +197,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <p>DASH by Plotly</p>
+<p><img src="posts\dash_logo_final.png" alt="Alt Text" width="500"></p>
 <p>Dash is one of the most trusted and widely used framework for building machine learning and data science web apps by plotly.</p>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Plotly’s Python graphing library makes interactive, publication-quality graphs. Plotly Dash is considered a python library, which is specificaly designed to build the web based data visualization application using python language. Python has taken over the world, and Dash enterprise is the leading vehicle for delivering Python analytics to business users. With help of Dash Open Source, you can create data apps on your laptop in pure Python, without requiring any Javascript coding, and can also share them to others for data collaboration.</p>
 <p>INTRODUCTION</p>
@@ -206,7 +207,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Apart from this, it is mainly used by data scientists, developers, and businesses to analyse data quickly by building an interactive dashboard where they can easily create custom, visually appealing charts and graphs with high interactivity. It provides a way to combine different representations or views of extensive data and visualise it according to the requirements due to its interactive buildup.</p>
 <p>INSTALATION AND SET UP</p>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;To install dash in python you have to enter the following command in your Jupyter or Colab notebook. (Can also be ran on Command prompt if you want use Dash through Python IDEs.)</p>
-<div id="cell-7" class="cell" data-jupyter="{&quot;outputs_hidden&quot;:true}" data-outputid="7da31e28-1118-4a63-d5fa-ad7af4ad6394" data-execution_count="3">
+<div id="cell-8" class="cell" data-jupyter="{&quot;outputs_hidden&quot;:true}" data-outputid="7da31e28-1118-4a63-d5fa-ad7af4ad6394" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>pip install <span class="op">-</span>q dash                   <span class="co"># Installs the Dash framework</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co"># !pip install dash renderer          # required for older versions</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>pip install <span class="op">-</span>q dash_html_components   <span class="co"># provides set of html components for creating dash layouts</span></span>
@@ -221,7 +222,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p>To start working with Dash, import the following libraries into your work environment:</p>
-<div id="cell-9" class="cell" data-jupyter="{&quot;outputs_hidden&quot;:true}" data-outputid="03e89849-b62e-43ca-aee5-8b488bd7e7e4" data-execution_count="7">
+<div id="cell-10" class="cell" data-jupyter="{&quot;outputs_hidden&quot;:true}" data-outputid="03e89849-b62e-43ca-aee5-8b488bd7e7e4" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> dash</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> dash_core_components <span class="im">as</span> dcc</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> dash_html_components <span class="im">as</span> html</span>
@@ -247,7 +248,7 @@ The dash_html_components package is deprecated. Please replace
 </div>
 <p>Code Structure</p>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The structure of a dash app code is divided into mainly two parts, the Layout and the Callback. The layout defines how the app will look, what all components and features would be included, etc. Anything that can be seen on the app is layout. The callback part is what makes dash apps interactive. It includes taking inputs, producing respective outputs and all the processing and functions required in between. The below code summarises what a basic dash code looks like.</p>
-<div id="cell-12" class="cell">
+<div id="cell-13" class="cell">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>app <span class="op">=</span> dash.Dash()   <span class="co">#defining a dashboard</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>app.layout <span class="op">=</span> html.Div([</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    <span class="co">## layout ##</span></span>
@@ -271,21 +272,21 @@ The dash_html_components package is deprecated. Please replace
 <ol type="1">
 <li>Dropdown</li>
 </ol>
-<div id="cell-22" class="cell">
+<div id="cell-23" class="cell">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>dcc.Dropdown([<span class="st">"Gujarat"</span>, <span class="st">"Maharashtra"</span>, <span class="st">"Rajasthan"</span>, <span class="st">"Delhi"</span>, <span class="st">"West Bengal"</span>, <span class="st">"Karnataka"</span>], <span class="st">"Gujarat"</span>) <span class="co">#Defines the layout of the app using a Div container to hold UI components.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>This is an example of a dropdown with some states as options and the default value as Gujarat.</p>
 <ol start="2" type="1">
 <li>Slider</li>
 </ol>
-<div id="cell-25" class="cell">
+<div id="cell-26" class="cell">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>dcc.Slider(<span class="op">-</span><span class="dv">5</span>, <span class="dv">10</span>, <span class="dv">1</span>, value<span class="op">=-</span><span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>In the slider we can also can also specify the range of values instead of a single value and such sliders are known as range sliders</p>
 <ol start="3" type="1">
 <li>Checkboxes</li>
 </ol>
-<div id="cell-28" class="cell">
+<div id="cell-29" class="cell">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>dcc.Checklist([<span class="st">"Gujarat"</span>, <span class="st">"Maharashtra"</span>, <span class="st">"Rajasthan"</span>, <span class="st">"Delhi"</span>, <span class="st">"West Bengal"</span>, <span class="st">"Karnataka"</span>],      <span class="co"># makes the checklist of the items in the list, they may be shown in line using inline(True)</span></span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>                  [<span class="st">"Gujarat"</span>,<span class="st">"Delhi"</span>]) <span class="co">## Gujarat and Delhi will be chosen by default</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
@@ -293,7 +294,7 @@ The dash_html_components package is deprecated. Please replace
 <li>Buttons</li>
 </ol>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The below code not only shows the use of button as a dcc feature, but also gives a idea of a dash code and a very naive glimpse of some other functionalities possible thorough dash, some of which are discussed later in the blog.</p>
-<div id="cell-31" class="cell" data-outputid="b289c702-2e6b-4200-a50f-ea83790ba0a5" data-execution_count="8">
+<div id="cell-32" class="cell" data-outputid="b289c702-2e6b-4200-a50f-ea83790ba0a5" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> dash <span class="im">import</span> Input, Output, State <span class="co"># imports important components which are useful in building the web app, handling callbacks and managing the user interaction</span></span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="co"># importing the external style sheet which helps in styling the app</span></span>
@@ -355,13 +356,13 @@ The dash_html_components package is deprecated. Please replace
 </div>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Apart from this, there are many other visual components feature which can be used in dash. The offcial dash tutorial can be referred to learn more about them.</p>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;All the components here should also have a parameter called id, which will be referred to as component_id in the callback, if more than once a same type of component is used and referred in the callback. You can define the id = ‘any string’ for each of these dcc components. An example is shown below. These work as identities for each layout component so you can later refer to them in the callback decorator and callback functions.</p>
-<div id="cell-33" class="cell">
+<div id="cell-34" class="cell">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>dcc.Slider(<span class="op">-</span><span class="dv">5</span>, <span class="dv">10</span>, <span class="dv">1</span>, value<span class="op">=-</span><span class="dv">3</span>, <span class="bu">id</span> <span class="op">=</span> <span class="st">'slider1'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>OUTPUT COMPONENTS</p>
 <p>Output components display results dynamically in Dash apps. It may contain the graphs, images, tables in it.</p>
 <p>Tables</p>
-<div id="cell-37" class="cell" data-outputid="b00cf2d0-9b9c-4958-9fc7-cfec9fbb0ccc" data-execution_count="9">
+<div id="cell-38" class="cell" data-outputid="b00cf2d0-9b9c-4958-9fc7-cfec9fbb0ccc" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> dash.dash_table <span class="im">as</span> dt</span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.DataFrame({</span>
@@ -410,7 +411,7 @@ The dash_html_components package is deprecated. Please replace
 </div>
 </div>
 <p>Graphs</p>
-<div id="cell-39" class="cell" data-outputid="1a0627d2-ff19-4f0d-f9a5-738bd2fe6cdf" data-execution_count="10">
+<div id="cell-40" class="cell" data-outputid="1a0627d2-ff19-4f0d-f9a5-738bd2fe6cdf" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>app2 <span class="op">=</span> dash.Dash(<span class="va">__name__</span>)</span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Load the iris dataset</span></span>
@@ -466,7 +467,7 @@ The dash_html_components package is deprecated. Please replace
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Remember to use different ports if you are working on two or more dash codes simultaneously, else they could overlap and affect each others outputs, ie, they will show the same app. Understand it in the way that each port can have one dash app code running.</p>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;These are some basic features of the dash-core-components which can be used to make the app more interactive. These are very basic features and are used very frequently while doing dash on a larger scale. Nonetheless, there are many other key features which are very helpful in making the app more interactive and human friendly. Do refer the official tutorial for more.</p>
 <p>TABLE LAYOUTS (using dbc)</p>
-<div id="cell-42" class="cell" data-outputid="09ab2478-3b8d-49e5-8d6d-2de369e3843f" data-execution_count="11">
+<div id="cell-43" class="cell" data-outputid="09ab2478-3b8d-49e5-8d6d-2de369e3843f" data-execution_count="11">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> dash_bootstrap_components <span class="im">as</span> dbc</span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Initialize the app with Bootstrap</span></span>
@@ -525,7 +526,7 @@ The dash_html_components package is deprecated. Please replace
 </div>
 </div>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;You can also stylize the divisions and subdivisions created by html.div using codes as follows, which are similar to how we style div tags in html. You have to just place code pieces like this (include and exclude parameters you want and don’t) before the end of html.div.</p>
-<div id="cell-44" class="cell">
+<div id="cell-45" class="cell">
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>style<span class="op">=</span>{<span class="st">'width'</span>: <span class="st">'49%'</span>, <span class="st">'display'</span>: <span class="st">'inline-block'</span>, <span class="st">'padding'</span>: <span class="st">'0 20'</span>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Don’t forget do refer the official tutorial and continue learning about new components in layouts….there are a plenty.</p>
@@ -535,13 +536,13 @@ The dash_html_components package is deprecated. Please replace
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;It is the part of callback that defines Input and Output for the ineteractivity required. It will always have minimum 2 arguments, which are input and output. It can of course have multiple inputs and multiple outputs, but it will have always have minimum one input and one output argument in it. These input and output components contain the component id(which tells which component to listen too, ie, which component to take input from and which to use for giving outputs) and component property(which property or parameter of the component to listen to). The components used here are the same as those created in the layout section. Any component you want to use here must be first created in the layout.</p>
 <p>Callback Function:</p>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Every input and output inside the callback decorator has to be represented in the callback function. Ellaborating, there can be as many functions that you want in the callback function section, each taking the defined inputs and outputs in order, but should cover all the inputs and outputs defined. There are two things to note and remeber here, one, all inputs and outputs are to be used as parameters and return respectively, and second, they are to be used in order, which also means that you cannot use any input or output more than once. Each output must be unique to a single callback to avoid conflicts and ensure proper updates. The inputs would go into the parameters according to their order and the return values would be assigned to outputs in order.</p>
-<div id="cell-52" class="cell">
+<div id="cell-53" class="cell">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>Output(component_id <span class="op">=</span> {}, component_property <span class="op">=</span> {})</span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>Input(component_id <span class="op">=</span> {}, component_property <span class="op">=</span> {})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>While defining the Outputs and the Inputs, we can define them by using component_id = {the id for that defined in layout}, to use the same type of component multiple times. The below code does not explicitly use this as there is only one component (Input).</p>
 <p>Let us practically see the application of callback in a dash code.</p>
-<div id="cell-54" class="cell" data-outputid="e71cff29-0bfd-49ff-a7e1-ecf9acf668f2" data-execution_count="12">
+<div id="cell-55" class="cell" data-outputid="e71cff29-0bfd-49ff-a7e1-ecf9acf668f2" data-execution_count="12">
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>app <span class="op">=</span> dash.Dash()</span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="co"># layout</span></span>
 <span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>app.layout <span class="op">=</span> html.Div([</span>
@@ -614,7 +615,7 @@ The dash_html_components package is deprecated. Please replace
 </ol>
 <p>Hands on example of using dash</p>
 <p>Dash is used to make interactive apps, so here we have created an interactive graph which shows the changes as we change the input from the dropdown.</p>
-<div id="cell-58" class="cell" data-outputid="227b4a43-7dcb-4f74-90ac-6518c568e1c6" data-execution_count="4">
+<div id="cell-59" class="cell" data-outputid="227b4a43-7dcb-4f74-90ac-6518c568e1c6" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> dash</span>
 <span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> dash <span class="im">import</span> dcc, html, Input, Output</span>
 <span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> plotly.express <span class="im">as</span> px</span>
