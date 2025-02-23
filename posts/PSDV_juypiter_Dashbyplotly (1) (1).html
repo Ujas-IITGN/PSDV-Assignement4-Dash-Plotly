@@ -201,13 +201,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <img src="https://raw.githubusercontent.com/Ujas-IITGN/PSDV-Assignement4-Dash-Plotly/master/posts/dash_logo_final.png" alt="Alt Text" width="500">
 </center>
 <p><br></p>
-<p>Dash is one of the most trusted and widely used framework for building machine learning and data science web apps by plotly.</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Plotly’s Python graphing library makes interactive, publication-quality graphs. Plotly Dash is considered a python library, which is specificaly designed to build the web based data visualization application using python language. Python has taken over the world, and Dash enterprise is the leading vehicle for delivering Python analytics to business users. With help of Dash Open Source, you can create data apps on your laptop in pure Python, without requiring any Javascript coding, and can also share them to others for data collaboration.</p>
+<p style="text-align: justify;">
+</p><p>Dash is one of the most trusted and widely used framework for building machine learning and data science web apps by plotly.</p>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Plotly’s Python graphing library makes interactive, publication-quality graphs. Plotly Dash is considered a python library, which is specificaly designed to build the web based data visualization application using python language. Python has taken over the world, and Dash enterprise is the leading vehicle for delivering Python analytics to business users. With help of Dash Open Source, you can create data apps on your laptop in pure Python, without requiring any Javascript coding, and can also share them to others for data collaboration.
+<p></p>
 <p>INTRODUCTION</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;How can we effectively track and visualize the spread of COVID-19 in real-time, providing users with up-to-date and interactive dashboards? How can we analyze and visualize stock market trends to make informed investment decisions? How can we present complex climate change data in an accessible and engaging way to raise awareness and drive action?…..Matplotlib might be an answer, but its applications are limited and static with nearly no level of interactivity. We need something more advanced and easy to use. This is where Plotly from dash comes in…</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dash from Plotly is a web application development framework built on top of frameworks and libraries like Flask, Plotly.js, and React.js, which is to be coded in Python, eliminating the requirement for any Javascript coding. It creates dynamic dashboards (a visual user interface that presents key information and metrics, i.e.&nbsp;the KPIs (Key Performance Indicators) in an organised manner) using pure Python. However, the syntax while writing the code somewhat represents the code as if it were written in HTML or JS; it is just that it is made simpler.</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The primary purpose of Dash from Plotly is to quickly implement a web interface and create dashboards with Plotly without having to learn javascript, HTML, and other web technologies, making them easy and quick for users. It is a high-level framework used to create beautiful analytical and interactive web-based visualisations, with minimal boilerplate code, that can be displayed in Jupyter notebooks using Dash by plotly. It is widely used due to its cross-platform compatibility, ie, dash apps are rendered in the browser, making them accessible to anyone on any device.</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Apart from this, it is mainly used by data scientists, developers, and businesses to analyse data quickly by building an interactive dashboard where they can easily create custom, visually appealing charts and graphs with high interactivity. It provides a way to combine different representations or views of extensive data and visualise it according to the requirements due to its interactive buildup.</p>
+<p style="text-align: justify;">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;How can we effectively track and visualize the spread of COVID-19 in real-time, providing users with up-to-date and interactive dashboards? How can we analyze and visualize stock market trends to make informed investment decisions? How can we present complex climate change data in an accessible and engaging way to raise awareness and drive action?…..Matplotlib might be an answer, but its applications are limited and static with nearly no level of interactivity. We need something more advanced and easy to use. This is where Plotly from dash comes in…
+</p>
+<p style="text-align: justify;">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dash from Plotly is a web application development framework built on top of frameworks and libraries like Flask, Plotly.js, and React.js, which is to be coded in Python, eliminating the requirement for any Javascript coding. It creates dynamic dashboards (a visual user interface that presents key information and metrics, i.e.&nbsp;the KPIs (Key Performance Indicators) in an organised manner) using pure Python. However, the syntax while writing the code somewhat represents the code as if it were written in HTML or JS; it is just that it is made simpler.
+</p>
+<p style="text-align: justify;">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The primary purpose of Dash from Plotly is to quickly implement a web interface and create dashboards with Plotly without having to learn javascript, HTML, and other web technologies, making them easy and quick for users. It is a high-level framework used to create beautiful analytical and interactive web-based visualisations, with minimal boilerplate code, that can be displayed in Jupyter notebooks using Dash by plotly. It is widely used due to its cross-platform compatibility, ie, dash apps are rendered in the browser, making them accessible to anyone on any device.
+</p>
+<p style="text-align: justify;">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Apart from this, it is mainly used by data scientists, developers, and businesses to analyse data quickly by building an interactive dashboard where they can easily create custom, visually appealing charts and graphs with high interactivity. It provides a way to combine different representations or views of extensive data and visualise it according to the requirements due to its interactive buildup.
+</p>
 <p>INSTALATION AND SET UP</p>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;To install dash in python you have to enter the following command in your Jupyter or Colab notebook. (Can also be ran on Command prompt if you want use Dash through Python IDEs.)</p>
 <div id="cell-8" class="cell" data-jupyter="{&quot;outputs_hidden&quot;:true}" data-outputid="7da31e28-1118-4a63-d5fa-ad7af4ad6394" data-execution_count="3">
@@ -250,7 +260,9 @@ The dash_html_components package is deprecated. Please replace
 </div>
 </div>
 <p>Code Structure</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The structure of a dash app code is divided into mainly two parts, the Layout and the Callback. The layout defines how the app will look, what all components and features would be included, etc. Anything that can be seen on the app is layout. The callback part is what makes dash apps interactive. It includes taking inputs, producing respective outputs and all the processing and functions required in between. The below code summarises what a basic dash code looks like.</p>
+<p style="text-align: justify;">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The structure of a dash app code is divided into mainly two parts, the Layout and the Callback. The layout defines how the app will look, what all components and features would be included, etc. Anything that can be seen on the app is layout. The callback part is what makes dash apps interactive. It includes taking inputs, producing respective outputs and all the processing and functions required in between. The below code summarises what a basic dash code looks like.
+</p>
 <div id="cell-13" class="cell">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>app <span class="op">=</span> dash.Dash()   <span class="co">#defining a dashboard</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>app.layout <span class="op">=</span> html.Div([</span>
@@ -265,11 +277,17 @@ The dash_html_components package is deprecated. Please replace
 <span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>    app.run(debug<span class="op">=</span><span class="va">True</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>LAYOUT</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Layout is the structure of the web app we are developing. It shows which and where the elements like graphs, text button, input and output will be shown. Dash is a web app framework that provides pure Python abstraction around HTML, CSS, and JavaScript. Instead of writing in HTML, you can compose your layout using Python with the Dash HTML Components module (dash.html), and the components of the app would be defined by the dash-core-components. Lets take a deeper look upon this:</p>
+<p style="text-align: justify;">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Layout is the structure of the web app we are developing. It shows which and where the elements like graphs, text button, input and output will be shown. Dash is a web app framework that provides pure Python abstraction around HTML, CSS, and JavaScript. Instead of writing in HTML, you can compose your layout using Python with the Dash HTML Components module (dash.html), and the components of the app would be defined by the dash-core-components. Lets take a deeper look upon this:
+</p>
 <p>DASH-HTML-COMPONENTS</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;These are used in a very similar way you use html, the codes and syntax is nearly the same, except you use html. instead of &lt;&gt; to define your tags. Thus we won’t discuss more upon it here and keep our focus on the new dash functions and objects we are going to learn.</p>
+<p style="text-align: justify;">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;These are used in a very similar way you use html, the codes and syntax is nearly the same, except you use html. instead of &lt;&gt; to define your tags. Thus we won’t discuss more upon it here and keep our focus on the new dash functions and objects we are going to learn.
+</p>
 <p>DASH-CORE-COMPONENTS</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lets see some of the different dash features which we create use using dash-core-components, includeing basic features like dropdown, sliders, checklists and interactive graphs. The Dash Core Components module (dash.dcc) gives you access to many interactive components, including dropdowns, checklists, and sliders. This all may be done for reading some large data sets, or building app layouts, and to produce components for giving back the output using callback (Callbacks are defined functionality within an app that are triggered by user interaction. More on it further down.)</p>
+<p style="text-align: justify;">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lets see some of the different dash features which we create use using dash-core-components, includeing basic features like dropdown, sliders, checklists and interactive graphs. The Dash Core Components module (dash.dcc) gives you access to many interactive components, including dropdowns, checklists, and sliders. This all may be done for reading some large data sets, or building app layouts, and to produce components for giving back the output using callback (Callbacks are defined functionality within an app that are triggered by user interaction. More on it further down.)
+</p>
 <p>VISUAL LAYOUTS</p>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Visual layouts are the in built dash features used to make the app more interactive and visually appealing. This visual layouts contains features and components like:</p>
 <ol type="1">
@@ -358,7 +376,9 @@ The dash_html_components package is deprecated. Please replace
 </div>
 </div>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Apart from this, there are many other visual components feature which can be used in dash. The offcial dash tutorial can be referred to learn more about them.</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;All the components here should also have a parameter called id, which will be referred to as component_id in the callback, if more than once a same type of component is used and referred in the callback. You can define the id = ‘any string’ for each of these dcc components. An example is shown below. These work as identities for each layout component so you can later refer to them in the callback decorator and callback functions.</p>
+<p style="text-align: justify;">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;All the components here should also have a parameter called id, which will be referred to as component_id in the callback, if more than once a same type of component is used and referred in the callback. You can define the id = ‘any string’ for each of these dcc components. An example is shown below. These work as identities for each layout component so you can later refer to them in the callback decorator and callback functions.
+</p>
 <div id="cell-34" class="cell">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>dcc.Slider(<span class="op">-</span><span class="dv">5</span>, <span class="dv">10</span>, <span class="dv">1</span>, value<span class="op">=-</span><span class="dv">3</span>, <span class="bu">id</span> <span class="op">=</span> <span class="st">'slider1'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
@@ -468,7 +488,9 @@ The dash_html_components package is deprecated. Please replace
 </div>
 </div>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Remember to use different ports if you are working on two or more dash codes simultaneously, else they could overlap and affect each others outputs, ie, they will show the same app. Understand it in the way that each port can have one dash app code running.</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;These are some basic features of the dash-core-components which can be used to make the app more interactive. These are very basic features and are used very frequently while doing dash on a larger scale. Nonetheless, there are many other key features which are very helpful in making the app more interactive and human friendly. Do refer the official tutorial for more.</p>
+<p style="text-align: justify;">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;These are some basic features of the dash-core-components which can be used to make the app more interactive. These are very basic features and are used very frequently while doing dash on a larger scale. Nonetheless, there are many other key features which are very helpful in making the app more interactive and human friendly. Do refer the official tutorial for more.
+</p>
 <p>TABLE LAYOUTS (using dbc)</p>
 <div id="cell-43" class="cell" data-outputid="09ab2478-3b8d-49e5-8d6d-2de369e3843f" data-execution_count="11">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> dash_bootstrap_components <span class="im">as</span> dbc</span>
@@ -536,9 +558,13 @@ The dash_html_components package is deprecated. Please replace
 <p>CALLBACK</p>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Callback is the interactivity in the dash app. It connects the components from the layout part of the code to the output making it interactive for the user. Callback is made of 2 different sections: callback decorator and callback function.</p>
 <p>Callback Decorator:</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;It is the part of callback that defines Input and Output for the ineteractivity required. It will always have minimum 2 arguments, which are input and output. It can of course have multiple inputs and multiple outputs, but it will have always have minimum one input and one output argument in it. These input and output components contain the component id(which tells which component to listen too, ie, which component to take input from and which to use for giving outputs) and component property(which property or parameter of the component to listen to). The components used here are the same as those created in the layout section. Any component you want to use here must be first created in the layout.</p>
+<p style="text-align: justify;">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;It is the part of callback that defines Input and Output for the ineteractivity required. It will always have minimum 2 arguments, which are input and output. It can of course have multiple inputs and multiple outputs, but it will have always have minimum one input and one output argument in it. These input and output components contain the component id(which tells which component to listen too, ie, which component to take input from and which to use for giving outputs) and component property(which property or parameter of the component to listen to). The components used here are the same as those created in the layout section. Any component you want to use here must be first created in the layout.
+</p>
 <p>Callback Function:</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Every input and output inside the callback decorator has to be represented in the callback function. Ellaborating, there can be as many functions that you want in the callback function section, each taking the defined inputs and outputs in order, but should cover all the inputs and outputs defined. There are two things to note and remeber here, one, all inputs and outputs are to be used as parameters and return respectively, and second, they are to be used in order, which also means that you cannot use any input or output more than once. Each output must be unique to a single callback to avoid conflicts and ensure proper updates. The inputs would go into the parameters according to their order and the return values would be assigned to outputs in order.</p>
+<p style="text-align: justify;">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Every input and output inside the callback decorator has to be represented in the callback function. Ellaborating, there can be as many functions that you want in the callback function section, each taking the defined inputs and outputs in order, but should cover all the inputs and outputs defined. There are two things to note and remeber here, one, all inputs and outputs are to be used as parameters and return respectively, and second, they are to be used in order, which also means that you cannot use any input or output more than once. Each output must be unique to a single callback to avoid conflicts and ensure proper updates. The inputs would go into the parameters according to their order and the return values would be assigned to outputs in order.
+</p>
 <div id="cell-53" class="cell">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>Output(component_id <span class="op">=</span> {}, component_property <span class="op">=</span> {})</span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>Input(component_id <span class="op">=</span> {}, component_property <span class="op">=</span> {})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -701,11 +727,9 @@ The dash_html_components package is deprecated. Please replace
 <p>If you wish to make good and proper dash apps, you will have to use python IDES instead of jupyter or colab. In that case, upon saving and running the code, you will get a url like http://127.0.0.1:8050/ (8050 is the port, it is the default port but you can change it as discussed earlier) where your dash app will be running live.</p>
 <p>Conclusion</p>
 <p>What we have seen till now is just a glimpse of what you can do with dash from plotly. It has numerous more beautiful and engaging components. So don’t forget to keep referring to the official tutorial and continue learning more dash functions and objects.</p>
-<p>Dash from Plotly changes how data scientists and analysts look at and understand data. It’s an easy-to-use, open-source tool that works well with popular data libraries, allowing users to build interactive web apps without much hassle. No matter if you’re an experienced programmer or just starting out, Dash offers clear instructions, community help, and user-friendliness, making it a great choice for turning data into interesting stories. As you start using Dash, you’ll find that the only limits to what you can visualize are your own creativity.</p>
-<p>References</p>
-<p>Official Dash tutorial by plotly : https://dash.plotly.com/</p>
-<p>Tutorial playlist by Plotly : https://www.youtube.com/playlist?list=PLYD54mj9I2JevdabetHsJ3RLCeMyBNKYV</p>
-<p>It is a nice place to start.</p>
+<p style="text-align: justify;">
+Dash from Plotly changes how data scientists and analysts look at and understand data. It’s an easy-to-use, open-source tool that works well with popular data libraries, allowing users to build interactive web apps without much hassle. No matter if you’re an experienced programmer or just starting out, Dash offers clear instructions, community help, and user-friendliness, making it a great choice for turning data into interesting stories. As you start using Dash, you’ll find that the only limits to what you can visualize are your own creativity.
+</p>
 
 
 
