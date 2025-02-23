@@ -9,7 +9,7 @@ website:
       - href: index.qmd
         text: Home
       - href: blog.qmd
-        text: Blog
+        text: Blog on Dash
       - href: https://dash.plotly.com/
         text: Official Tutorial
       - href: https://www.youtube.com/playlist?list=PLYD54mj9I2JevdabetHsJ3RLCeMyBNKYV

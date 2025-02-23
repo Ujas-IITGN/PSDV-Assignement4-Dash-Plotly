@@ -1,6 +1,9 @@
 ---
-title: Dash from PLotly
+title: Dash from Plotly
 ---
 
 Welcome to the blog introducing Dash to beginners. Hope it helps!!!
+
+Click on the Blog on Dash in the navigation bar to start and jump into this wonderful world of Data Visualisation through Dash by Plotly
+
 Happy learning!!!
