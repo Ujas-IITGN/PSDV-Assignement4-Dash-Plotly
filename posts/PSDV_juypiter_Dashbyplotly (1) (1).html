@@ -309,38 +309,38 @@ DASH-CORE-COMPONENTS
 VISUAL LAYOUTS
 </h5>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Visual layouts are the in built dash features used to make the app more interactive and visually appealing. This visual layouts contains features and components like:</p>
-<p>
-</p><ol type="1">
+<h5 style="font-family: 'Arial', sans-serif;" class="anchored">
+<ol type="1">
 <li>Dropdown
-<p></p></li>
-</ol>
+</li></ol></h5>
+
 <div id="cell-23" class="cell">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>dcc.Dropdown([<span class="st">"Gujarat"</span>, <span class="st">"Maharashtra"</span>, <span class="st">"Rajasthan"</span>, <span class="st">"Delhi"</span>, <span class="st">"West Bengal"</span>, <span class="st">"Karnataka"</span>], <span class="st">"Gujarat"</span>) <span class="co">#Defines the layout of the app using a Div container to hold UI components.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>This is an example of a dropdown with some states as options and the default value as Gujarat.</p>
-<p>
-</p><ol start="2" type="1">
+<h5 style="font-family: 'Arial', sans-serif;" class="anchored">
+<ol start="2" type="1">
 <li>Slider
-<p></p></li>
-</ol>
+</li></ol></h5>
+
 <div id="cell-26" class="cell">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>dcc.Slider(<span class="op">-</span><span class="dv">5</span>, <span class="dv">10</span>, <span class="dv">1</span>, value<span class="op">=-</span><span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>In the slider we can also can also specify the range of values instead of a single value and such sliders are known as range sliders</p>
-<p>
-</p><ol start="3" type="1">
+<h5 style="font-family: 'Arial', sans-serif;" class="anchored">
+<ol start="3" type="1">
 <li>Checkboxes
-<p></p></li>
-</ol>
+</li></ol></h5>
+
 <div id="cell-29" class="cell">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>dcc.Checklist([<span class="st">"Gujarat"</span>, <span class="st">"Maharashtra"</span>, <span class="st">"Rajasthan"</span>, <span class="st">"Delhi"</span>, <span class="st">"West Bengal"</span>, <span class="st">"Karnataka"</span>],      <span class="co"># makes the checklist of the items in the list, they may be shown in line using inline(True)</span></span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>                  [<span class="st">"Gujarat"</span>,<span class="st">"Delhi"</span>]) <span class="co">## Gujarat and Delhi will be chosen by default</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>
-</p><ol start="4" type="1">
+<h5 style="font-family: 'Arial', sans-serif;" class="anchored">
+<ol start="4" type="1">
 <li>Buttons
-<p></p></li>
-</ol>
+</li></ol></h5>
+
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The below code not only shows the use of button as a dcc feature, but also gives a idea of a dash code and a very naive glimpse of some other functionalities possible thorough dash, some of which are discussed later in the blog.</p>
 <div id="cell-32" class="cell" data-outputid="b289c702-2e6b-4200-a50f-ea83790ba0a5" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> dash <span class="im">import</span> Input, Output, State <span class="co"># imports important components which are useful in building the web app, handling callbacks and managing the user interaction</span></span>
