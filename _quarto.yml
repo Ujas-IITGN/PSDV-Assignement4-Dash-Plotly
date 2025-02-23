@@ -14,6 +14,8 @@ website:
         text: Official Tutorial
       - href: https://www.youtube.com/playlist?list=PLYD54mj9I2JevdabetHsJ3RLCeMyBNKYV
         text: Tutorial playlist
+      - href: https://wasmdash.vercel.app/
+        text: Wasmdash(for practice)
 
 format:
   html:
