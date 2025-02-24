@@ -2,11 +2,11 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.6.41">
+<meta name="generator" content="quarto-1.6.42">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Ujas Shah 24110376  Dhrumil Bhutaiya 24110075  Dhanraj Visapara 24110106">
+<meta name="author" content="Ujas Shah   Dhrumil Bhutaiya   Dhanraj Visapara">
 <meta name="dcterms.date" content="2025-02-23">
 
 <title>Data Visualisation through interactive dashboards from Dash by Plotly – Dash from Plotly</title>
@@ -71,7 +71,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-49927ad6ac989989b068a441603fbd97.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-8e00f2f28a1266a720913de837032221.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap-a7bd43d0b24d8bae36fd69f78a934b1b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
@@ -178,7 +178,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Author</div>
     <div class="quarto-title-meta-contents">
-             <p>Ujas Shah 24110376<br> Dhrumil Bhutaiya 24110075<br> Dhanraj Visapara 24110106 </p>
+             <p>Ujas Shah <br> Dhrumil Bhutaiya <br> Dhanraj Visapara </p>
           </div>
   </div>
     
@@ -198,27 +198,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <p><br></p>
-<style>
-.responsive-image {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.responsive-text {
-  text-align: center;
-  font-size: 10px;
-}
-</style>
-<img class="responsive-image" src="https://raw.githubusercontent.com/Ujas-IITGN/PSDV-Assignement4-Dash-Plotly/master/posts/dash_logo_final.png" alt="Alt Text">
-<p class="responsive-text">
+<center>
+<img src="https://raw.githubusercontent.com/Ujas-IITGN/PSDV-Assignement4-Dash-Plotly/master/posts/dash_logo_final.png" alt="Alt Text" width="500">
+<p style="font-size: 10px; text-align : center;">
 Img source : https://tinyurl.com/52tk9dnn
 </p>
+</center>
 <p><br></p>
 <p style="text-align: justify;">
-Dash is one of the most trusted and widely used framework for building machine learning and data science web apps by plotly.
+Dash is one of the most trusted and widely used framework for building machine learning and data science web apps by Plotly.
 </p>
 <p style="text-align: justify;">
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Plotly’s Python graphing library makes interactive, publication-quality graphs. Plotly Dash is considered a python library, which is specificaly designed to build the web based data visualization application using python language. Python has taken over the world, and Dash enterprise is the leading vehicle for delivering Python analytics to business users. With help of Dash Open Source, you can create data apps on your laptop in pure Python, without requiring any Javascript coding, and can also share them to others for data collaboration.
@@ -238,21 +226,29 @@ INTRODUCTION
 <p style="text-align: justify;">
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Apart from this, it is mainly used by data scientists, developers, and businesses to analyse data quickly by building an interactive dashboard where they can easily create custom, visually appealing charts and graphs with high interactivity. It provides a way to combine different representations or views of extensive data and visualise it according to the requirements due to its interactive buildup.
 </p>
-<p><h7>Note: Important links to tutorials and practice sites are given in the navigation bar above. Do check them out as you go through the blog</h7></p>
 <h4 style="font-family: 'Arial', sans-serif;" class="anchored">
-INSTALLATION AND SET UP
+INSTALATION AND SET UP
 </h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;To install dash in python you have to enter the following command in your Jupyter or Colab notebook. (Can also be ran on Command prompt if you want use Dash through Python IDEs.)</p>
-<div id="cell-9" class="cell" data-jupyter="{&quot;outputs_hidden&quot;:true}" data-outputid="7da31e28-1118-4a63-d5fa-ad7af4ad6394">
+<div id="cell-8" class="cell" data-jupyter="{&quot;outputs_hidden&quot;:true}" data-outputid="7da31e28-1118-4a63-d5fa-ad7af4ad6394">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>pip install <span class="op">-</span>q dash                   <span class="co"># Installs the Dash framework</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co"># !pip install dash renderer          # required for older versions</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>pip install <span class="op">-</span>q dash_html_components   <span class="co"># provides set of html components for creating dash layouts</span></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>pip install <span class="op">-</span>q dash_core_components   <span class="co"># Installs the core components like droper, slidders,etc for interactive elements in dash</span></span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>pip install <span class="op">-</span>q dash_bootstrap_components   <span class="co">#includes advanced html components and also used to make tables</span></span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co"># -q is to suppress the output of a !pip command, entirely optional</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-error">
+<div class="ansi-escaped-output">
+<pre><span class="ansi-red-fg ansi-bold">Running cells with '.conda (Python 3.12.9)' requires the ipykernel package.
+
+</span><span class="ansi-red-fg ansi-bold">Run the following command to install 'ipykernel' into the Python environment. 
+
+</span><span class="ansi-red-fg ansi-bold">Command: 'conda install -n .conda ipykernel --update-deps --force-reinstall'</span></pre>
+</div>
+</div>
 </div>
 <p>To start working with Dash, import the following libraries into your work environment:</p>
-<div id="cell-11" class="cell" data-jupyter="{&quot;outputs_hidden&quot;:true}" data-outputid="03e89849-b62e-43ca-aee5-8b488bd7e7e4">
+<div id="cell-10" class="cell" data-jupyter="{&quot;outputs_hidden&quot;:true}" data-outputid="03e89849-b62e-43ca-aee5-8b488bd7e7e4">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> dash</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> dash_core_components <span class="im">as</span> dcc</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> dash_html_components <span class="im">as</span> html</span>
@@ -262,16 +258,13 @@ INSTALLATION AND SET UP
 <span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> plotly.express <span class="im">as</span> px   <span class="co">#for data visualisation.....it gives better visualisation options</span></span>
 <span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="co">#alternatively matplotlib can also be used.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p style="text-align: justify;">
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If you wish to use Dash without having to install all the libraries and dependencies, you can use wasmdash.vercel whose link is given in the navbar, where you can online simulate your app without needing to install these. But remember if you want to make a proper app for some purpose, it is always advised to do using python IDEs.
-</p>
 <h4 style="font-family: 'Arial', sans-serif;" class="anchored">
 Code Structure
 </h4>
 <p style="text-align: justify;">
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The structure of a dash app code is divided into mainly two parts, the Layout and the Callback. The layout defines how the app will look, what all components and features would be included, etc. Anything that can be seen on the app is layout. The callback part is what makes dash apps interactive. It includes taking inputs, producing respective outputs and all the processing and functions required in between. The below code summarises what a basic dash code looks like.
 </p>
-<div id="cell-15" class="cell">
+<div id="cell-13" class="cell">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>app <span class="op">=</span> dash.Dash()   <span class="co">#defining a dashboard</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>app.layout <span class="op">=</span> html.Div([</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="co">## layout ##</span></span>
@@ -311,7 +304,7 @@ VISUAL LAYOUTS
 <li>Dropdown
 </li></ol></h5>
 
-<div id="cell-25" class="cell">
+<div id="cell-23" class="cell">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>dcc.Dropdown([<span class="st">"Gujarat"</span>, <span class="st">"Maharashtra"</span>, <span class="st">"Rajasthan"</span>, <span class="st">"Delhi"</span>, <span class="st">"West Bengal"</span>, <span class="st">"Karnataka"</span>], <span class="st">"Gujarat"</span>) <span class="co">#Defines the layout of the app using a Div container to hold UI components.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>This is an example of a dropdown with some states as options and the default value as Gujarat.</p>
@@ -320,7 +313,7 @@ VISUAL LAYOUTS
 <li>Slider
 </li></ol></h5>
 
-<div id="cell-28" class="cell">
+<div id="cell-26" class="cell">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>dcc.Slider(<span class="op">-</span><span class="dv">5</span>, <span class="dv">10</span>, <span class="dv">1</span>, value<span class="op">=-</span><span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>In the slider we can also can also specify the range of values instead of a single value and such sliders are known as range sliders</p>
@@ -329,7 +322,7 @@ VISUAL LAYOUTS
 <li>Checkboxes
 </li></ol></h5>
 
-<div id="cell-31" class="cell">
+<div id="cell-29" class="cell">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>dcc.Checklist([<span class="st">"Gujarat"</span>, <span class="st">"Maharashtra"</span>, <span class="st">"Rajasthan"</span>, <span class="st">"Delhi"</span>, <span class="st">"West Bengal"</span>, <span class="st">"Karnataka"</span>],      <span class="co"># makes the checklist of the items in the list, they may be shown in line using inline(True)</span></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>                  [<span class="st">"Gujarat"</span>,<span class="st">"Delhi"</span>]) <span class="co">## Gujarat and Delhi will be chosen by default</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
@@ -339,7 +332,7 @@ VISUAL LAYOUTS
 </li></ol></h5>
 
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The below code not only shows the use of button as a dcc feature, but also gives a idea of a dash code and a very naive glimpse of some other functionalities possible thorough dash, some of which are discussed later in the blog.</p>
-<div id="cell-34" class="cell" data-outputid="b289c702-2e6b-4200-a50f-ea83790ba0a5" data-execution_count="5">
+<div id="cell-32" class="cell" data-outputid="b289c702-2e6b-4200-a50f-ea83790ba0a5" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> dash <span class="im">import</span> Input, Output, State <span class="co"># imports important components which are useful in building the web app, handling callbacks and managing the user interaction</span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="co"># importing the external style sheet which helps in styling the app</span></span>
@@ -369,16 +362,41 @@ VISUAL LAYOUTS
 <span id="cb7-27"><a href="#cb7-27" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">'__main__'</span>:</span>
 <span id="cb7-28"><a href="#cb7-28" aria-hidden="true" tabindex="-1"></a>    app4.run(debug<span class="op">=</span><span class="va">True</span>, port <span class="op">=</span> <span class="dv">4999</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-
-        <iframe width="100%" height="650" src="http://127.0.0.1:4999/" frameborder="0" allowfullscreen=""></iframe>
-        
+<script type="application/javascript">
+(async (port, path, width, height, cache, element) => {
+    if (!google.colab.kernel.accessAllowed && !cache) {
+      return;
+    }
+    element.appendChild(document.createTextNode(''));
+    const url = await google.colab.kernel.proxyPort(port, {cache});
+    const iframe = document.createElement('iframe');
+    iframe.src = new URL(path, url).toString();
+    iframe.height = height;
+    iframe.width = width;
+    iframe.style.border = 0;
+    iframe.allow = [
+        'accelerometer',
+        'autoplay',
+        'camera',
+        'clipboard-read',
+        'clipboard-write',
+        'gyroscope',
+        'magnetometer',
+        'microphone',
+        'serial',
+        'usb',
+        'xr-spatial-tracking',
+    ].join('; ');
+    element.appendChild(iframe);
+  })(4999, "/", "100%", 650, false, window.element)
+</script>
 </div>
 </div>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Apart from this, there are many other visual components feature which can be used in dash. The offcial dash tutorial can be referred to learn more about them.</p>
 <p style="text-align: justify;">
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;All the components here should also have a parameter called id, which will be referred to as component_id in the callback, if more than once a same type of component is used and referred in the callback. You can define the id = ‘any string’ for each of these dcc components. An example is shown below. These work as identities for each layout component so you can later refer to them in the callback decorator and callback functions.
 </p>
-<div id="cell-36" class="cell">
+<div id="cell-34" class="cell">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>dcc.Slider(<span class="op">-</span><span class="dv">5</span>, <span class="dv">10</span>, <span class="dv">1</span>, value<span class="op">=-</span><span class="dv">3</span>, <span class="bu">id</span> <span class="op">=</span> <span class="st">'slider1'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <h5 style="font-family: 'Arial', sans-serif;" class="anchored">
@@ -388,7 +406,7 @@ OUTPUT COMPONENTS
 <h5 style="font-family: 'Arial', sans-serif;" class="anchored">
 Tables
 </h5>
-<div id="cell-40" class="cell" data-outputid="b00cf2d0-9b9c-4958-9fc7-cfec9fbb0ccc" data-execution_count="6">
+<div id="cell-38" class="cell" data-outputid="b00cf2d0-9b9c-4958-9fc7-cfec9fbb0ccc" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> dash.dash_table <span class="im">as</span> dt</span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.DataFrame({</span>
@@ -406,15 +424,40 @@ Tables
 <span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">'__main__'</span>:</span>
 <span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a>    app1.run(debug<span class="op">=</span><span class="va">True</span>, port <span class="op">=</span> <span class="dv">5000</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-
-        <iframe width="100%" height="650" src="http://127.0.0.1:5000/" frameborder="0" allowfullscreen=""></iframe>
-        
+<script type="application/javascript">
+(async (port, path, width, height, cache, element) => {
+    if (!google.colab.kernel.accessAllowed && !cache) {
+      return;
+    }
+    element.appendChild(document.createTextNode(''));
+    const url = await google.colab.kernel.proxyPort(port, {cache});
+    const iframe = document.createElement('iframe');
+    iframe.src = new URL(path, url).toString();
+    iframe.height = height;
+    iframe.width = width;
+    iframe.style.border = 0;
+    iframe.allow = [
+        'accelerometer',
+        'autoplay',
+        'camera',
+        'clipboard-read',
+        'clipboard-write',
+        'gyroscope',
+        'magnetometer',
+        'microphone',
+        'serial',
+        'usb',
+        'xr-spatial-tracking',
+    ].join('; ');
+    element.appendChild(iframe);
+  })(5000, "/", "100%", 650, false, window.element)
+</script>
 </div>
 </div>
 <h5 style="font-family: 'Arial', sans-serif;" class="anchored">
 Graphs
 </h5>
-<div id="cell-42" class="cell" data-outputid="1a0627d2-ff19-4f0d-f9a5-738bd2fe6cdf" data-execution_count="7">
+<div id="cell-40" class="cell" data-outputid="1a0627d2-ff19-4f0d-f9a5-738bd2fe6cdf" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>app2 <span class="op">=</span> dash.Dash(<span class="va">__name__</span>)</span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Load the iris dataset</span></span>
@@ -437,9 +480,34 @@ Graphs
 <span id="cb10-20"><a href="#cb10-20" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">'__main__'</span>:</span>
 <span id="cb10-21"><a href="#cb10-21" aria-hidden="true" tabindex="-1"></a>    app2.run_server(debug<span class="op">=</span><span class="va">True</span>, port <span class="op">=</span> <span class="dv">5001</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-
-        <iframe width="100%" height="650" src="http://127.0.0.1:5001/" frameborder="0" allowfullscreen=""></iframe>
-        
+<script type="application/javascript">
+(async (port, path, width, height, cache, element) => {
+    if (!google.colab.kernel.accessAllowed && !cache) {
+      return;
+    }
+    element.appendChild(document.createTextNode(''));
+    const url = await google.colab.kernel.proxyPort(port, {cache});
+    const iframe = document.createElement('iframe');
+    iframe.src = new URL(path, url).toString();
+    iframe.height = height;
+    iframe.width = width;
+    iframe.style.border = 0;
+    iframe.allow = [
+        'accelerometer',
+        'autoplay',
+        'camera',
+        'clipboard-read',
+        'clipboard-write',
+        'gyroscope',
+        'magnetometer',
+        'microphone',
+        'serial',
+        'usb',
+        'xr-spatial-tracking',
+    ].join('; ');
+    element.appendChild(iframe);
+  })(5001, "/", "100%", 650, false, window.element)
+</script>
 </div>
 </div>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Remember to use different ports if you are working on two or more dash codes simultaneously, else they could overlap and affect each others outputs, ie, they will show the same app. Understand it in the way that each port can have one dash app code running.</p>
@@ -449,7 +517,7 @@ Graphs
 <h5 style="font-family: 'Arial', sans-serif;" class="anchored">
 TABLE LAYOUTS (using dbc)
 </h5>
-<div id="cell-45" class="cell" data-outputid="09ab2478-3b8d-49e5-8d6d-2de369e3843f" data-execution_count="8">
+<div id="cell-43" class="cell" data-outputid="09ab2478-3b8d-49e5-8d6d-2de369e3843f" data-execution_count="11">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> dash_bootstrap_components <span class="im">as</span> dbc</span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Initialize the app with Bootstrap</span></span>
@@ -477,13 +545,38 @@ TABLE LAYOUTS (using dbc)
 <span id="cb11-25"><a href="#cb11-25" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">"__main__"</span>:</span>
 <span id="cb11-26"><a href="#cb11-26" aria-hidden="true" tabindex="-1"></a>    app5.run_server(debug<span class="op">=</span><span class="va">True</span>, port <span class="op">=</span> <span class="dv">5002</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-
-        <iframe width="100%" height="650" src="http://127.0.0.1:5002/" frameborder="0" allowfullscreen=""></iframe>
-        
+<script type="application/javascript">
+(async (port, path, width, height, cache, element) => {
+    if (!google.colab.kernel.accessAllowed && !cache) {
+      return;
+    }
+    element.appendChild(document.createTextNode(''));
+    const url = await google.colab.kernel.proxyPort(port, {cache});
+    const iframe = document.createElement('iframe');
+    iframe.src = new URL(path, url).toString();
+    iframe.height = height;
+    iframe.width = width;
+    iframe.style.border = 0;
+    iframe.allow = [
+        'accelerometer',
+        'autoplay',
+        'camera',
+        'clipboard-read',
+        'clipboard-write',
+        'gyroscope',
+        'magnetometer',
+        'microphone',
+        'serial',
+        'usb',
+        'xr-spatial-tracking',
+    ].join('; ');
+    element.appendChild(iframe);
+  })(5002, "/", "100%", 650, false, window.element)
+</script>
 </div>
 </div>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;You can also stylize the divisions and subdivisions created by html.div using codes as follows, which are similar to how we style div tags in html. You have to just place code pieces like this (include and exclude parameters you want and don’t) before the end of html.div.</p>
-<div id="cell-47" class="cell">
+<div id="cell-45" class="cell">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>style<span class="op">=</span>{<span class="st">'width'</span>: <span class="st">'49%'</span>, <span class="st">'display'</span>: <span class="st">'inline-block'</span>, <span class="st">'padding'</span>: <span class="st">'0 20'</span>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Don’t forget do refer the official tutorial and continue learning about new components in layouts….there are a plenty.</p>
@@ -503,13 +596,13 @@ Callback Function:
 <p style="text-align: justify;">
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Every input and output inside the callback decorator has to be represented in the callback function. Ellaborating, there can be as many functions that you want in the callback function section, each taking the defined inputs and outputs in order, but should cover all the inputs and outputs defined. There are two things to note and remeber here, one, all inputs and outputs are to be used as parameters and return respectively, and second, they are to be used in order, which also means that you cannot use any input or output more than once. Each output must be unique to a single callback to avoid conflicts and ensure proper updates. The inputs would go into the parameters according to their order and the return values would be assigned to outputs in order.
 </p>
-<div id="cell-55" class="cell">
+<div id="cell-53" class="cell">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>Output(component_id <span class="op">=</span> {}, component_property <span class="op">=</span> {})</span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>Input(component_id <span class="op">=</span> {}, component_property <span class="op">=</span> {})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;While defining the Outputs and the Inputs, we can define them by using component_id = {the id for that defined in layout}, to use the same type of component multiple times. The below code does not explicitly use this as there is only one component (Input).</p>
+<p>While defining the Outputs and the Inputs, we can define them by using component_id = {the id for that defined in layout}, to use the same type of component multiple times. The below code does not explicitly use this as there is only one component (Input).</p>
 <p>Let us practically see the application of callback in a dash code.</p>
-<div id="cell-57" class="cell" data-outputid="e71cff29-0bfd-49ff-a7e1-ecf9acf668f2" data-execution_count="9">
+<div id="cell-55" class="cell" data-outputid="e71cff29-0bfd-49ff-a7e1-ecf9acf668f2" data-execution_count="12">
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>app <span class="op">=</span> dash.Dash()</span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="co"># layout</span></span>
 <span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>app.layout <span class="op">=</span> html.Div([</span>
@@ -542,9 +635,34 @@ Callback Function:
 <span id="cb14-30"><a href="#cb14-30" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">'__main__'</span>:</span>
 <span id="cb14-31"><a href="#cb14-31" aria-hidden="true" tabindex="-1"></a>    app.run(port<span class="op">=</span><span class="dv">5051</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-
-        <iframe width="100%" height="650" src="http://127.0.0.1:5051/" frameborder="0" allowfullscreen=""></iframe>
-        
+<script type="application/javascript">
+(async (port, path, width, height, cache, element) => {
+    if (!google.colab.kernel.accessAllowed && !cache) {
+      return;
+    }
+    element.appendChild(document.createTextNode(''));
+    const url = await google.colab.kernel.proxyPort(port, {cache});
+    const iframe = document.createElement('iframe');
+    iframe.src = new URL(path, url).toString();
+    iframe.height = height;
+    iframe.width = width;
+    iframe.style.border = 0;
+    iframe.allow = [
+        'accelerometer',
+        'autoplay',
+        'camera',
+        'clipboard-read',
+        'clipboard-write',
+        'gyroscope',
+        'magnetometer',
+        'microphone',
+        'serial',
+        'usb',
+        'xr-spatial-tracking',
+    ].join('; ');
+    element.appendChild(iframe);
+  })(5051, "/", "100%", 650, false, window.element)
+</script>
 </div>
 </div>
 <p>Explanation of the Above Code:</p>
@@ -559,7 +677,7 @@ Callback Function:
 Hands on example of using dash
 </h4>
 <p>Dash is used to make interactive apps, so here we have created an interactive graph which shows the changes as we change the input from the dropdown.</p>
-<div id="cell-61" class="cell" data-outputid="227b4a43-7dcb-4f74-90ac-6518c568e1c6" data-execution_count="12">
+<div id="cell-59" class="cell" data-outputid="227b4a43-7dcb-4f74-90ac-6518c568e1c6" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> dash</span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> dash <span class="im">import</span> dcc, html, Input, Output</span>
 <span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> plotly.express <span class="im">as</span> px</span>
@@ -608,24 +726,45 @@ Hands on example of using dash
 <span id="cb15-46"><a href="#cb15-46" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">'__main__'</span>:</span>
 <span id="cb15-47"><a href="#cb15-47" aria-hidden="true" tabindex="-1"></a>    app.run_server(debug<span class="op">=</span><span class="va">True</span>, port <span class="op">=</span> <span class="dv">1007</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-
-        <iframe width="100%" height="650" src="http://127.0.0.1:1007/" frameborder="0" allowfullscreen=""></iframe>
-        
+<script type="application/javascript">
+(async (port, path, width, height, cache, element) => {
+    if (!google.colab.kernel.accessAllowed && !cache) {
+      return;
+    }
+    element.appendChild(document.createTextNode(''));
+    const url = await google.colab.kernel.proxyPort(port, {cache});
+    const iframe = document.createElement('iframe');
+    iframe.src = new URL(path, url).toString();
+    iframe.height = height;
+    iframe.width = width;
+    iframe.style.border = 0;
+    iframe.allow = [
+        'accelerometer',
+        'autoplay',
+        'camera',
+        'clipboard-read',
+        'clipboard-write',
+        'gyroscope',
+        'magnetometer',
+        'microphone',
+        'serial',
+        'usb',
+        'xr-spatial-tracking',
+    ].join('; ');
+    element.appendChild(iframe);
+  })(1007, "/", "100%", 650, false, window.element)
+</script>
 </div>
 </div>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This is a simple dash code that interactively displays a scatter plot of the selected feature against the species. The dropdown allows you to select different features from the Iris dataset, and the graph updates accordingly.</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If you wish to make good and proper dash apps, you will have to use python IDES instead of jupyter or colab. In that case, upon saving and running the code, you will get a url like http://127.0.0.1:8050/ (8050 is the port, it is the default port but you can change it as discussed earlier) where your dash app will be running live.</p>
-<h5 style="font-family: 'Arial', sans-serif;" class="anchored">
+<p>This is a simple dash code that interactively displays a scatter plot of the selected feature against the species. The dropdown allows you to select different features from the Iris dataset, and the graph updates accordingly.</p>
+<p>If you wish to make good and proper dash apps, you will have to use python IDES instead of jupyter or colab. In that case, upon saving and running the code, you will get a url like http://127.0.0.1:8050/ (8050 is the port, it is the default port but you can change it as discussed earlier) where your dash app will be running live.</p>
+<h4 style="font-family: 'Arial', sans-serif;" class="anchored">
 Conclusion
-</h5>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;What we have seen till now is just a glimpse of what you can do with dash from plotly. It has numerous more beautiful and engaging components. So don’t forget to keep referring to the official tutorial and continue learning more dash functions and objects.</p>
+</h4>
+<p>What we have seen till now is just a glimpse of what you can do with dash from plotly. It has numerous more beautiful and engaging components. So don’t forget to keep referring to the official tutorial and continue learning more dash functions and objects.</p>
 <p style="text-align: justify;">
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dash from Plotly changes how data scientists and analysts look at and understand data. It’s an easy-to-use, open-source tool that works well with popular data libraries, allowing users to build interactive web apps without much hassle. No matter if you’re an experienced programmer or just starting out, Dash offers clear instructions, community help, and user-friendliness, making it a great choice for turning data into interesting stories. As you start using Dash, you’ll find that the only limits to what you can visualize are your own creativity.
+Dash from Plotly changes how data scientists and analysts look at and understand data. It’s an easy-to-use, open-source tool that works well with popular data libraries, allowing users to build interactive web apps without much hassle. No matter if you’re an experienced programmer or just starting out, Dash offers clear instructions, community help, and user-friendliness, making it a great choice for turning data into interesting stories. As you start using Dash, you’ll find that the only limits to what you can visualize are your own creativity.
 </p>
-<h5 style="font-family: 'Arial', sans-serif;" class="anchored">
-Practice
-</h5>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;To practice this wonderful library with a treasure of tools for data visualisation, before creating actual complex and useful apps, you can use https://wasmdash.vercel.app/ to create smaller and practice app with live output in the same window. It is extremely useful for trying out and learnign new things in Dash from Plotly. So do try it out…..Happy learning!!!</p>
 
 
 
