@@ -217,8 +217,8 @@ Dash is one of the most trusted and widely used framework for building machine l
 <p style="text-align: justify;">
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Plotly’s Python graphing library makes interactive, publication-quality graphs. Plotly Dash is considered a python library, which is specificaly designed to build the web based data visualization application using python language. Python has taken over the world, and Dash enterprise is the leading vehicle for delivering Python analytics to business users. With help of Dash Open Source, you can create data apps on your laptop in pure Python, without requiring any Javascript coding, and can also share them to others for data collaboration.
 </p>
-<section id="introduction" class="level5">
-<h5 class="anchored" data-anchor-id="introduction">Introduction</h5>
+<section id="introduction" class="level4">
+<h4 class="anchored" data-anchor-id="introduction">Introduction</h4>
 <p style="text-align: justify;">
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;How can we effectively track and visualize the spread of COVID-19 in real-time, providing users with up-to-date and interactive dashboards? How can we analyze and visualize stock market trends to make informed investment decisions? How can we present complex climate change data in an accessible and engaging way to raise awareness and drive action?…..Matplotlib might be an answer, but its applications are limited and static with nearly no level of interactivity. We need something more advanced and easy to use. This is where Plotly from dash comes in…
 </p>
@@ -233,8 +233,8 @@ Dash is one of the most trusted and widely used framework for building machine l
 </p>
 <p><h7>Note: Important links to tutorials and practice sites are given in the navigation bar above. Do check them out as you go through the blog</h7></p>
 </section>
-<section id="installation-and-setup" class="level5">
-<h5 class="anchored" data-anchor-id="installation-and-setup">Installation and Setup</h5>
+<section id="installation-and-setup" class="level4">
+<h4 class="anchored" data-anchor-id="installation-and-setup">Installation and Setup</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;To install dash in python you have to enter the following command in your Jupyter or Colab notebook. (Can also be ran on Command prompt if you want use Dash through Python IDEs.)</p>
 <p>
 </p></section>
@@ -256,8 +256,8 @@ Dash is one of the most trusted and widely used framework for building machine l
 <p style="text-align: justify;">
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If you wish to use Dash without having to install all the libraries and dependencies, you can use wasmdash.vercel whose link is given in the navbar, where you can online simulate your app without needing to install these. But remember if you want to make a proper app for some purpose, it is always advised to do using python IDEs.
 </p>
-<section id="code-structure" class="level5">
-<h5 class="anchored" data-anchor-id="code-structure">Code Structure</h5>
+<section id="code-structure" class="level4">
+<h4 class="anchored" data-anchor-id="code-structure">Code Structure</h4>
 <p style="text-align: justify;">
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The structure of a dash app code is divided into mainly two parts, the Layout and the Callback. The layout defines how the app will look, what all components and features would be included, etc. Anything that can be seen on the app is layout. The callback part is what makes dash apps interactive. It includes taking inputs, producing respective outputs and all the processing and functions required in between. The below code summarises what a basic dash code looks like.
 </p>
@@ -275,8 +275,8 @@ Dash is one of the most trusted and widely used framework for building machine l
 <span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>    app.run(debug<span class="op">=</span><span class="va">True</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="layout" class="level5">
-<h5 class="anchored" data-anchor-id="layout">Layout</h5>
+<section id="layout" class="level4">
+<h4 class="anchored" data-anchor-id="layout">Layout</h4>
 <p style="text-align: justify;">
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Layout is the structure of the web app we are developing. It shows which and where the elements like graphs, text button, input and output will be shown. Dash is a web app framework that provides pure Python abstraction around HTML, CSS, and JavaScript. Instead of writing in HTML, you can compose your layout using Python with the Dash HTML Components module (dash.html), and the components of the app would be defined by the dash-core-components. Lets take a deeper look upon this:
 </p>
@@ -598,8 +598,8 @@ Output
 </div>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Don’t forget do refer the official tutorial and continue learning about new components in layouts….there are a plenty.</p>
 </section>
-<section id="callback" class="level5">
-<h5 class="anchored" data-anchor-id="callback">Callback</h5>
+<section id="callback" class="level4">
+<h4 class="anchored" data-anchor-id="callback">Callback</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Callback is the interactivity in the dash app. It connects the components from the layout part of the code to the output making it interactive for the user. Callback is made of 2 different sections: callback decorator and callback function.</p>
 <h5 style="font-family: 'Arial', sans-serif;" class="anchored">
 Callback Decorator:
@@ -696,8 +696,8 @@ Output
 <li><p>Finally, we implement the callback function. This function is automatically triggered whenever the user inputs a new number, and it produces the corresponding output.</p></li>
 </ol>
 </section>
-<section id="hands-on-example-of-using-dash" class="level5">
-<h5 class="anchored" data-anchor-id="hands-on-example-of-using-dash">Hands on example of using dash</h5>
+<section id="hands-on-example-of-using-dash" class="level4">
+<h4 class="anchored" data-anchor-id="hands-on-example-of-using-dash">Hands on example of using dash</h4>
 <p>Dash is used to make interactive apps, so here we have created an interactive graph which shows the changes as we change the input from the dropdown.</p>
 <div id="cell-66" class="cell" data-outputid="227b4a43-7dcb-4f74-90ac-6518c568e1c6" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> dash</span>
@@ -786,8 +786,8 @@ Output
 <p>This is a simple dash code that interactively displays a scatter plot of the selected feature against the species. The dropdown allows you to select different features from the Iris dataset, and the graph updates accordingly.</p>
 <p>If you wish to make good and proper dash apps, you will have to use python IDES instead of jupyter or colab. In that case, upon saving and running the code, you will get a url like http://127.0.0.1:8050/ (8050 is the port, it is the default port but you can change it as discussed earlier) where your dash app will be running live.</p>
 </section>
-<section id="conclusion" class="level5">
-<h5 class="anchored" data-anchor-id="conclusion">Conclusion</h5>
+<section id="conclusion" class="level4">
+<h4 class="anchored" data-anchor-id="conclusion">Conclusion</h4>
 <p>What we have seen till now is just a glimpse of what you can do with dash from plotly. It has numerous more beautiful and engaging components. So don’t forget to keep referring to the official tutorial and continue learning more dash functions and objects.</p>
 <p style="text-align: justify;">
 Dash from Plotly changes how data scientists and analysts look at and understand data. It’s an easy-to-use, open-source tool that works well with popular data libraries, allowing users to build interactive web apps without much hassle. No matter if you’re an experienced programmer or just starting out, Dash offers clear instructions, community help, and user-friendliness, making it a great choice for turning data into interesting stories. As you start using Dash, you’ll find that the only limits to what you can visualize are your own creativity.
