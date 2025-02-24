@@ -230,17 +230,24 @@ INTRODUCTION
 INSTALATION AND SET UP
 </h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;To install dash in python you have to enter the following command in your Jupyter or Colab notebook. (Can also be ran on Command prompt if you want use Dash through Python IDEs.)</p>
-<p>!pip install -q dash # Installs the Dash framework # !pip install dash renderer # required for older versions !pip install -q dash_html_components # provides set of html components for creating dash layouts !pip install -q dash_core_components # Installs the core components like droper, slidders,etc for interactive elements in dash !pip install -q dash_bootstrap_components #includes advanced html components and also used to make tables # -q is to suppress the output of a !pip command, entirely optional</p>
+<div id="cell-8" class="cell" data-vscode="{&quot;languageId&quot;:&quot;raw&quot;}">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>pip install <span class="op">-</span>q dash                   <span class="co"># Installs the Dash framework</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co"># !pip install dash renderer          # required for older versions</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>pip install <span class="op">-</span>q dash_html_components   <span class="co"># provides set of html components for creating dash layouts</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>pip install <span class="op">-</span>q dash_core_components   <span class="co"># Installs the core components like droper, slidders,etc for interactive elements in dash</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>pip install <span class="op">-</span>q dash_bootstrap_components   <span class="co">#includes advanced html components and also used to make tables</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co"># -q is to suppress the output of a !pip command, entirely optional</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <p>To start working with Dash, import the following libraries into your work environment:</p>
 <div id="cell-10" class="cell" data-jupyter="{&quot;outputs_hidden&quot;:true}" data-outputid="03e89849-b62e-43ca-aee5-8b488bd7e7e4">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> dash</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> dash_core_components <span class="im">as</span> dcc</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> dash_html_components <span class="im">as</span> html</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> dash <span class="im">import</span> callback, Dash</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd   <span class="co">#for data manipulation</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> plotly.express <span class="im">as</span> px   <span class="co">#for data visualisation.....it gives better visualisation options</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co">#alternatively matplotlib can also be used.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> dash</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> dash_core_components <span class="im">as</span> dcc</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> dash_html_components <span class="im">as</span> html</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> dash <span class="im">import</span> callback, Dash</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd   <span class="co">#for data manipulation</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> plotly.express <span class="im">as</span> px   <span class="co">#for data visualisation.....it gives better visualisation options</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="co">#alternatively matplotlib can also be used.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <h4 style="font-family: 'Arial', sans-serif;" class="anchored">
 Code Structure
@@ -249,17 +256,17 @@ Code Structure
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The structure of a dash app code is divided into mainly two parts, the Layout and the Callback. The layout defines how the app will look, what all components and features would be included, etc. Anything that can be seen on the app is layout. The callback part is what makes dash apps interactive. It includes taking inputs, producing respective outputs and all the processing and functions required in between. The below code summarises what a basic dash code looks like.
 </p>
 <div id="cell-13" class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>app <span class="op">=</span> dash.Dash()   <span class="co">#defining a dashboard</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>app.layout <span class="op">=</span> html.Div([</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="co">## layout ##</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>])</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="at">@callback</span>(</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    <span class="co">## callback inputs and outputs ##</span></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="co">## callback functions ##</span></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">'__main__'</span>:</span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>    app.run(debug<span class="op">=</span><span class="va">True</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>app <span class="op">=</span> dash.Dash()   <span class="co">#defining a dashboard</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>app.layout <span class="op">=</span> html.Div([</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="co">## layout ##</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>])</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="at">@callback</span>(</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    <span class="co">## callback inputs and outputs ##</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="co">## callback functions ##</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">'__main__'</span>:</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>    app.run(debug<span class="op">=</span><span class="va">True</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <h4 style="font-family: 'Arial', sans-serif;" class="anchored">
 LAYOUT
@@ -289,7 +296,7 @@ VISUAL LAYOUTS
 </li></ol></h5>
 
 <div id="cell-23" class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>dcc.Dropdown([<span class="st">"Gujarat"</span>, <span class="st">"Maharashtra"</span>, <span class="st">"Rajasthan"</span>, <span class="st">"Delhi"</span>, <span class="st">"West Bengal"</span>, <span class="st">"Karnataka"</span>], <span class="st">"Gujarat"</span>) <span class="co">#Defines the layout of the app using a Div container to hold UI components.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>dcc.Dropdown([<span class="st">"Gujarat"</span>, <span class="st">"Maharashtra"</span>, <span class="st">"Rajasthan"</span>, <span class="st">"Delhi"</span>, <span class="st">"West Bengal"</span>, <span class="st">"Karnataka"</span>], <span class="st">"Gujarat"</span>) <span class="co">#Defines the layout of the app using a Div container to hold UI components.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>This is an example of a dropdown with some states as options and the default value as Gujarat.</p>
 <h5 style="font-family: 'Arial', sans-serif;" class="anchored">
@@ -298,7 +305,7 @@ VISUAL LAYOUTS
 </li></ol></h5>
 
 <div id="cell-26" class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>dcc.Slider(<span class="op">-</span><span class="dv">5</span>, <span class="dv">10</span>, <span class="dv">1</span>, value<span class="op">=-</span><span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>dcc.Slider(<span class="op">-</span><span class="dv">5</span>, <span class="dv">10</span>, <span class="dv">1</span>, value<span class="op">=-</span><span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>In the slider we can also can also specify the range of values instead of a single value and such sliders are known as range sliders</p>
 <h5 style="font-family: 'Arial', sans-serif;" class="anchored">
@@ -307,8 +314,8 @@ VISUAL LAYOUTS
 </li></ol></h5>
 
 <div id="cell-29" class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>dcc.Checklist([<span class="st">"Gujarat"</span>, <span class="st">"Maharashtra"</span>, <span class="st">"Rajasthan"</span>, <span class="st">"Delhi"</span>, <span class="st">"West Bengal"</span>, <span class="st">"Karnataka"</span>],      <span class="co"># makes the checklist of the items in the list, they may be shown in line using inline(True)</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>                  [<span class="st">"Gujarat"</span>,<span class="st">"Delhi"</span>]) <span class="co">## Gujarat and Delhi will be chosen by default</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>dcc.Checklist([<span class="st">"Gujarat"</span>, <span class="st">"Maharashtra"</span>, <span class="st">"Rajasthan"</span>, <span class="st">"Delhi"</span>, <span class="st">"West Bengal"</span>, <span class="st">"Karnataka"</span>],      <span class="co"># makes the checklist of the items in the list, they may be shown in line using inline(True)</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>                  [<span class="st">"Gujarat"</span>,<span class="st">"Delhi"</span>]) <span class="co">## Gujarat and Delhi will be chosen by default</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <h5 style="font-family: 'Arial', sans-serif;" class="anchored">
 <ol start="4" type="1">
@@ -317,34 +324,34 @@ VISUAL LAYOUTS
 
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The below code not only shows the use of button as a dcc feature, but also gives a idea of a dash code and a very naive glimpse of some other functionalities possible thorough dash, some of which are discussed later in the blog.</p>
 <div id="cell-32" class="cell" data-outputid="b289c702-2e6b-4200-a50f-ea83790ba0a5" data-execution_count="8">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> dash <span class="im">import</span> Input, Output, State <span class="co"># imports important components which are useful in building the web app, handling callbacks and managing the user interaction</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="co"># importing the external style sheet which helps in styling the app</span></span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>external_stylesheets <span class="op">=</span> [<span class="st">'https://codepen.io/chriddyp/pen/bWLwgP.css'</span>]</span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>app4 <span class="op">=</span> Dash(<span class="va">__name__</span>, external_stylesheets<span class="op">=</span>external_stylesheets)  <span class="co"># initializes</span></span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>app4.layout <span class="op">=</span> html.Div([</span>
-<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>    html.Div(dcc.Input(<span class="bu">id</span><span class="op">=</span><span class="st">'input-box'</span>, <span class="bu">type</span><span class="op">=</span><span class="st">'text'</span>)),  <span class="co"># Creates a text input field where users can enter values</span></span>
-<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>    html.Button(<span class="st">'Submit'</span>, <span class="bu">id</span><span class="op">=</span><span class="st">'button-example-1'</span>),   <span class="co"># creates the button named submit to trigger the action</span></span>
-<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>    html.Div(<span class="bu">id</span><span class="op">=</span><span class="st">'output-container-button'</span>,                   <span class="co">#Creates a div to display output messages.</span></span>
-<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>             children<span class="op">=</span><span class="st">'Enter a value and press submit'</span>)</span>
-<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>])</span>
-<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a><span class="co"># defining the callback function which updates the value of the output</span></span>
-<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a><span class="at">@callback</span>(</span>
-<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>    Output(<span class="st">'output-container-button'</span>, <span class="st">'children'</span>),   <span class="co"># Specifies that the callback updates the text inside the output div</span></span>
-<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>    Input(<span class="st">'button-example-1'</span>, <span class="st">'n_clicks'</span>),  <span class="co"># trigger</span></span>
-<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>    State(<span class="st">'input-box'</span>, <span class="st">'value'</span>)) <span class="co"># takes the input value when triggered</span></span>
-<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a><span class="co"># defining the function to update the output message based on the input</span></span>
-<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> update_output(n_clicks, value):</span>
-<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="st">'The assignment was of "</span><span class="sc">{}</span><span class="st">" and the button has been clicked </span><span class="sc">{}</span><span class="st"> times'</span>.<span class="bu">format</span>(</span>
-<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a>        value,</span>
-<span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a>        n_clicks</span>
-<span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a>    )</span>
-<span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-27"><a href="#cb6-27" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">'__main__'</span>:</span>
-<span id="cb6-28"><a href="#cb6-28" aria-hidden="true" tabindex="-1"></a>    app4.run(debug<span class="op">=</span><span class="va">True</span>, port <span class="op">=</span> <span class="dv">4999</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> dash <span class="im">import</span> Input, Output, State <span class="co"># imports important components which are useful in building the web app, handling callbacks and managing the user interaction</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="co"># importing the external style sheet which helps in styling the app</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>external_stylesheets <span class="op">=</span> [<span class="st">'https://codepen.io/chriddyp/pen/bWLwgP.css'</span>]</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>app4 <span class="op">=</span> Dash(<span class="va">__name__</span>, external_stylesheets<span class="op">=</span>external_stylesheets)  <span class="co"># initializes</span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>app4.layout <span class="op">=</span> html.Div([</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>    html.Div(dcc.Input(<span class="bu">id</span><span class="op">=</span><span class="st">'input-box'</span>, <span class="bu">type</span><span class="op">=</span><span class="st">'text'</span>)),  <span class="co"># Creates a text input field where users can enter values</span></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>    html.Button(<span class="st">'Submit'</span>, <span class="bu">id</span><span class="op">=</span><span class="st">'button-example-1'</span>),   <span class="co"># creates the button named submit to trigger the action</span></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>    html.Div(<span class="bu">id</span><span class="op">=</span><span class="st">'output-container-button'</span>,                   <span class="co">#Creates a div to display output messages.</span></span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>             children<span class="op">=</span><span class="st">'Enter a value and press submit'</span>)</span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>])</span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a><span class="co"># defining the callback function which updates the value of the output</span></span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a><span class="at">@callback</span>(</span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>    Output(<span class="st">'output-container-button'</span>, <span class="st">'children'</span>),   <span class="co"># Specifies that the callback updates the text inside the output div</span></span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>    Input(<span class="st">'button-example-1'</span>, <span class="st">'n_clicks'</span>),  <span class="co"># trigger</span></span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a>    State(<span class="st">'input-box'</span>, <span class="st">'value'</span>)) <span class="co"># takes the input value when triggered</span></span>
+<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a><span class="co"># defining the function to update the output message based on the input</span></span>
+<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> update_output(n_clicks, value):</span>
+<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="st">'The assignment was of "</span><span class="sc">{}</span><span class="st">" and the button has been clicked </span><span class="sc">{}</span><span class="st"> times'</span>.<span class="bu">format</span>(</span>
+<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a>        value,</span>
+<span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a>        n_clicks</span>
+<span id="cb7-25"><a href="#cb7-25" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb7-26"><a href="#cb7-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-27"><a href="#cb7-27" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">'__main__'</span>:</span>
+<span id="cb7-28"><a href="#cb7-28" aria-hidden="true" tabindex="-1"></a>    app4.run(debug<span class="op">=</span><span class="va">True</span>, port <span class="op">=</span> <span class="dv">4999</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <script type="application/javascript">
 (async (port, path, width, height, cache, element) => {
@@ -381,7 +388,7 @@ VISUAL LAYOUTS
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;All the components here should also have a parameter called id, which will be referred to as component_id in the callback, if more than once a same type of component is used and referred in the callback. You can define the id = ‘any string’ for each of these dcc components. An example is shown below. These work as identities for each layout component so you can later refer to them in the callback decorator and callback functions.
 </p>
 <div id="cell-34" class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>dcc.Slider(<span class="op">-</span><span class="dv">5</span>, <span class="dv">10</span>, <span class="dv">1</span>, value<span class="op">=-</span><span class="dv">3</span>, <span class="bu">id</span> <span class="op">=</span> <span class="st">'slider1'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>dcc.Slider(<span class="op">-</span><span class="dv">5</span>, <span class="dv">10</span>, <span class="dv">1</span>, value<span class="op">=-</span><span class="dv">3</span>, <span class="bu">id</span> <span class="op">=</span> <span class="st">'slider1'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <h5 style="font-family: 'Arial', sans-serif;" class="anchored">
 OUTPUT COMPONENTS
@@ -391,22 +398,22 @@ OUTPUT COMPONENTS
 Tables
 </h5>
 <div id="cell-38" class="cell" data-outputid="b00cf2d0-9b9c-4958-9fc7-cfec9fbb0ccc" data-execution_count="9">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> dash.dash_table <span class="im">as</span> dt</span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.DataFrame({</span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Name"</span>: [<span class="st">'Dhrumil'</span>,<span class="st">'Ujas'</span>,<span class="st">'Dhanraj'</span>,<span class="st">'Devarsh'</span>,<span class="st">'Rishabh'</span>],</span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Marks"</span>: [<span class="dv">35</span>,<span class="dv">37</span>,<span class="dv">33</span>,<span class="dv">40</span>,<span class="dv">38</span>]</span>
-<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>})</span>
-<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>app1 <span class="op">=</span> dash.Dash()</span>
-<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>app1.layout <span class="op">=</span> html.Div([</span>
-<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>    dt.DataTable(<span class="bu">id</span><span class="op">=</span><span class="st">"output-table"</span>, data<span class="op">=</span>df.to_dict(<span class="st">"records"</span>), columns<span class="op">=</span>[{<span class="st">"name"</span>: i, <span class="st">"id"</span>: i} <span class="cf">for</span> i <span class="kw">in</span> df.columns], style_cell<span class="op">=</span>{<span class="st">'textAlign'</span>: <span class="st">'center'</span>})</span>
-<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>])</span>
-<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Here 'id' assigns an ID to the table which could be later be helpful in the callback. It is also used to distinguish between multiple components as discussed before</span></span>
-<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">'__main__'</span>:</span>
-<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a>    app1.run(debug<span class="op">=</span><span class="va">True</span>, port <span class="op">=</span> <span class="dv">5000</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> dash.dash_table <span class="im">as</span> dt</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.DataFrame({</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Name"</span>: [<span class="st">'Dhrumil'</span>,<span class="st">'Ujas'</span>,<span class="st">'Dhanraj'</span>,<span class="st">'Devarsh'</span>,<span class="st">'Rishabh'</span>],</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Marks"</span>: [<span class="dv">35</span>,<span class="dv">37</span>,<span class="dv">33</span>,<span class="dv">40</span>,<span class="dv">38</span>]</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>})</span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>app1 <span class="op">=</span> dash.Dash()</span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>app1.layout <span class="op">=</span> html.Div([</span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>    dt.DataTable(<span class="bu">id</span><span class="op">=</span><span class="st">"output-table"</span>, data<span class="op">=</span>df.to_dict(<span class="st">"records"</span>), columns<span class="op">=</span>[{<span class="st">"name"</span>: i, <span class="st">"id"</span>: i} <span class="cf">for</span> i <span class="kw">in</span> df.columns], style_cell<span class="op">=</span>{<span class="st">'textAlign'</span>: <span class="st">'center'</span>})</span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>])</span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Here 'id' assigns an ID to the table which could be later be helpful in the callback. It is also used to distinguish between multiple components as discussed before</span></span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">'__main__'</span>:</span>
+<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a>    app1.run(debug<span class="op">=</span><span class="va">True</span>, port <span class="op">=</span> <span class="dv">5000</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <script type="application/javascript">
 (async (port, path, width, height, cache, element) => {
@@ -442,27 +449,27 @@ Tables
 Graphs
 </h5>
 <div id="cell-40" class="cell" data-outputid="1a0627d2-ff19-4f0d-f9a5-738bd2fe6cdf" data-execution_count="10">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>app2 <span class="op">=</span> dash.Dash(<span class="va">__name__</span>)</span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Load the iris dataset</span></span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> px.data.iris()</span>
-<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a scatter plot</span></span>
-<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> px.scatter(df, x<span class="op">=</span><span class="st">"sepal_width"</span>, y<span class="op">=</span><span class="st">"sepal_length"</span>) <span class="co">#matplotlib can also be used here</span></span>
-<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Define the app layout</span></span>
-<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>app2.layout <span class="op">=</span> html.Div([</span>
-<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>    html.H1(<span class="st">"Iris Scatter Plot"</span>), <span class="co">#equivalent to &lt;h1&gt;&lt;/h1&gt;</span></span>
-<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a>    dcc.Graph(figure<span class="op">=</span>fig)</span>
-<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a>])</span>
-<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a><span class="co"># Run the Dash app</span></span>
-<span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-20"><a href="#cb9-20" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">'__main__'</span>:</span>
-<span id="cb9-21"><a href="#cb9-21" aria-hidden="true" tabindex="-1"></a>    app2.run_server(debug<span class="op">=</span><span class="va">True</span>, port <span class="op">=</span> <span class="dv">5001</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>app2 <span class="op">=</span> dash.Dash(<span class="va">__name__</span>)</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Load the iris dataset</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> px.data.iris()</span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a scatter plot</span></span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> px.scatter(df, x<span class="op">=</span><span class="st">"sepal_width"</span>, y<span class="op">=</span><span class="st">"sepal_length"</span>) <span class="co">#matplotlib can also be used here</span></span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Define the app layout</span></span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a>app2.layout <span class="op">=</span> html.Div([</span>
+<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a>    html.H1(<span class="st">"Iris Scatter Plot"</span>), <span class="co">#equivalent to &lt;h1&gt;&lt;/h1&gt;</span></span>
+<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a>    dcc.Graph(figure<span class="op">=</span>fig)</span>
+<span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a>])</span>
+<span id="cb10-17"><a href="#cb10-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-18"><a href="#cb10-18" aria-hidden="true" tabindex="-1"></a><span class="co"># Run the Dash app</span></span>
+<span id="cb10-19"><a href="#cb10-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-20"><a href="#cb10-20" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">'__main__'</span>:</span>
+<span id="cb10-21"><a href="#cb10-21" aria-hidden="true" tabindex="-1"></a>    app2.run_server(debug<span class="op">=</span><span class="va">True</span>, port <span class="op">=</span> <span class="dv">5001</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <script type="application/javascript">
 (async (port, path, width, height, cache, element) => {
@@ -502,32 +509,32 @@ Graphs
 TABLE LAYOUTS (using dbc)
 </h5>
 <div id="cell-43" class="cell" data-outputid="09ab2478-3b8d-49e5-8d6d-2de369e3843f" data-execution_count="11">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> dash_bootstrap_components <span class="im">as</span> dbc</span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Initialize the app with Bootstrap</span></span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>app5 <span class="op">=</span> dash.Dash(<span class="va">__name__</span>, external_stylesheets<span class="op">=</span>[dbc.themes.BOOTSTRAP])</span>
-<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Layout with styled rows and columns</span></span>
-<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>app5.layout <span class="op">=</span> dbc.Container([</span>
-<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>    dbc.Row([</span>
-<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>        dbc.Col(html.Div(<span class="st">"Column 1 - Row 1"</span>, className<span class="op">=</span><span class="st">"p-3 border text-center"</span>), width<span class="op">=</span><span class="dv">4</span>),</span>
-<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a>        dbc.Col(html.Div(<span class="st">"Column 2 - Row 1"</span>, className<span class="op">=</span><span class="st">"p-3 border text-center"</span>), width<span class="op">=</span><span class="dv">4</span>),</span>
-<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a>        dbc.Col(html.Div(<span class="st">"Column 3 - Row 1"</span>, className<span class="op">=</span><span class="st">"p-3 border text-center"</span>), width<span class="op">=</span><span class="dv">4</span>)</span>
-<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a>    ], className<span class="op">=</span><span class="st">"mb-3 bg-warning"</span>),  <span class="co"># Yellow row</span></span>
-<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a>    dbc.Row([</span>
-<span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a>        dbc.Col(html.Div(<span class="st">"Column 1 - Row 2"</span>, className<span class="op">=</span><span class="st">"p-3 border text-center"</span>), width<span class="op">=</span><span class="dv">6</span>),</span>
-<span id="cb10-17"><a href="#cb10-17" aria-hidden="true" tabindex="-1"></a>        dbc.Col(html.Div(<span class="st">"Column 2 - Row 2"</span>, className<span class="op">=</span><span class="st">"p-3 border text-center"</span>), width<span class="op">=</span><span class="dv">6</span>)</span>
-<span id="cb10-18"><a href="#cb10-18" aria-hidden="true" tabindex="-1"></a>    ], className<span class="op">=</span><span class="st">"mb-3 bg-warningy"</span>),  <span class="co"># Yellow row</span></span>
-<span id="cb10-19"><a href="#cb10-19" aria-hidden="true" tabindex="-1"></a>    dbc.Row([</span>
-<span id="cb10-20"><a href="#cb10-20" aria-hidden="true" tabindex="-1"></a>        dbc.Col(html.Div(<span class="st">"Full-width Column in Row 3"</span>, className<span class="op">=</span><span class="st">"p-3 border text-center"</span>), width<span class="op">=</span><span class="dv">12</span>)</span>
-<span id="cb10-21"><a href="#cb10-21" aria-hidden="true" tabindex="-1"></a>    ], className<span class="op">=</span><span class="st">"bg-warning"</span>)  <span class="co"># Blue row</span></span>
-<span id="cb10-22"><a href="#cb10-22" aria-hidden="true" tabindex="-1"></a>], fluid<span class="op">=</span><span class="va">True</span>, style<span class="op">=</span>{<span class="st">"background-color"</span>: <span class="st">" #00FF00"</span>})  <span class="co"># Green background for columns</span></span>
-<span id="cb10-23"><a href="#cb10-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-24"><a href="#cb10-24" aria-hidden="true" tabindex="-1"></a><span class="co"># Run the app</span></span>
-<span id="cb10-25"><a href="#cb10-25" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">"__main__"</span>:</span>
-<span id="cb10-26"><a href="#cb10-26" aria-hidden="true" tabindex="-1"></a>    app5.run_server(debug<span class="op">=</span><span class="va">True</span>, port <span class="op">=</span> <span class="dv">5002</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> dash_bootstrap_components <span class="im">as</span> dbc</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Initialize the app with Bootstrap</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>app5 <span class="op">=</span> dash.Dash(<span class="va">__name__</span>, external_stylesheets<span class="op">=</span>[dbc.themes.BOOTSTRAP])</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Layout with styled rows and columns</span></span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>app5.layout <span class="op">=</span> dbc.Container([</span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>    dbc.Row([</span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a>        dbc.Col(html.Div(<span class="st">"Column 1 - Row 1"</span>, className<span class="op">=</span><span class="st">"p-3 border text-center"</span>), width<span class="op">=</span><span class="dv">4</span>),</span>
+<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a>        dbc.Col(html.Div(<span class="st">"Column 2 - Row 1"</span>, className<span class="op">=</span><span class="st">"p-3 border text-center"</span>), width<span class="op">=</span><span class="dv">4</span>),</span>
+<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a>        dbc.Col(html.Div(<span class="st">"Column 3 - Row 1"</span>, className<span class="op">=</span><span class="st">"p-3 border text-center"</span>), width<span class="op">=</span><span class="dv">4</span>)</span>
+<span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a>    ], className<span class="op">=</span><span class="st">"mb-3 bg-warning"</span>),  <span class="co"># Yellow row</span></span>
+<span id="cb11-15"><a href="#cb11-15" aria-hidden="true" tabindex="-1"></a>    dbc.Row([</span>
+<span id="cb11-16"><a href="#cb11-16" aria-hidden="true" tabindex="-1"></a>        dbc.Col(html.Div(<span class="st">"Column 1 - Row 2"</span>, className<span class="op">=</span><span class="st">"p-3 border text-center"</span>), width<span class="op">=</span><span class="dv">6</span>),</span>
+<span id="cb11-17"><a href="#cb11-17" aria-hidden="true" tabindex="-1"></a>        dbc.Col(html.Div(<span class="st">"Column 2 - Row 2"</span>, className<span class="op">=</span><span class="st">"p-3 border text-center"</span>), width<span class="op">=</span><span class="dv">6</span>)</span>
+<span id="cb11-18"><a href="#cb11-18" aria-hidden="true" tabindex="-1"></a>    ], className<span class="op">=</span><span class="st">"mb-3 bg-warningy"</span>),  <span class="co"># Yellow row</span></span>
+<span id="cb11-19"><a href="#cb11-19" aria-hidden="true" tabindex="-1"></a>    dbc.Row([</span>
+<span id="cb11-20"><a href="#cb11-20" aria-hidden="true" tabindex="-1"></a>        dbc.Col(html.Div(<span class="st">"Full-width Column in Row 3"</span>, className<span class="op">=</span><span class="st">"p-3 border text-center"</span>), width<span class="op">=</span><span class="dv">12</span>)</span>
+<span id="cb11-21"><a href="#cb11-21" aria-hidden="true" tabindex="-1"></a>    ], className<span class="op">=</span><span class="st">"bg-warning"</span>)  <span class="co"># Blue row</span></span>
+<span id="cb11-22"><a href="#cb11-22" aria-hidden="true" tabindex="-1"></a>], fluid<span class="op">=</span><span class="va">True</span>, style<span class="op">=</span>{<span class="st">"background-color"</span>: <span class="st">" #00FF00"</span>})  <span class="co"># Green background for columns</span></span>
+<span id="cb11-23"><a href="#cb11-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-24"><a href="#cb11-24" aria-hidden="true" tabindex="-1"></a><span class="co"># Run the app</span></span>
+<span id="cb11-25"><a href="#cb11-25" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">"__main__"</span>:</span>
+<span id="cb11-26"><a href="#cb11-26" aria-hidden="true" tabindex="-1"></a>    app5.run_server(debug<span class="op">=</span><span class="va">True</span>, port <span class="op">=</span> <span class="dv">5002</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <script type="application/javascript">
 (async (port, path, width, height, cache, element) => {
@@ -561,7 +568,7 @@ TABLE LAYOUTS (using dbc)
 </div>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;You can also stylize the divisions and subdivisions created by html.div using codes as follows, which are similar to how we style div tags in html. You have to just place code pieces like this (include and exclude parameters you want and don’t) before the end of html.div.</p>
 <div id="cell-45" class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>style<span class="op">=</span>{<span class="st">'width'</span>: <span class="st">'49%'</span>, <span class="st">'display'</span>: <span class="st">'inline-block'</span>, <span class="st">'padding'</span>: <span class="st">'0 20'</span>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>style<span class="op">=</span>{<span class="st">'width'</span>: <span class="st">'49%'</span>, <span class="st">'display'</span>: <span class="st">'inline-block'</span>, <span class="st">'padding'</span>: <span class="st">'0 20'</span>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Don’t forget do refer the official tutorial and continue learning about new components in layouts….there are a plenty.</p>
 <h4 style="font-family: 'Arial', sans-serif;" class="anchored">
@@ -581,43 +588,43 @@ Callback Function:
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Every input and output inside the callback decorator has to be represented in the callback function. Ellaborating, there can be as many functions that you want in the callback function section, each taking the defined inputs and outputs in order, but should cover all the inputs and outputs defined. There are two things to note and remeber here, one, all inputs and outputs are to be used as parameters and return respectively, and second, they are to be used in order, which also means that you cannot use any input or output more than once. Each output must be unique to a single callback to avoid conflicts and ensure proper updates. The inputs would go into the parameters according to their order and the return values would be assigned to outputs in order.
 </p>
 <div id="cell-53" class="cell">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>Output(component_id <span class="op">=</span> {}, component_property <span class="op">=</span> {})</span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>Input(component_id <span class="op">=</span> {}, component_property <span class="op">=</span> {})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>Output(component_id <span class="op">=</span> {}, component_property <span class="op">=</span> {})</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>Input(component_id <span class="op">=</span> {}, component_property <span class="op">=</span> {})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>While defining the Outputs and the Inputs, we can define them by using component_id = {the id for that defined in layout}, to use the same type of component multiple times. The below code does not explicitly use this as there is only one component (Input).</p>
 <p>Let us practically see the application of callback in a dash code.</p>
 <div id="cell-55" class="cell" data-outputid="e71cff29-0bfd-49ff-a7e1-ecf9acf668f2" data-execution_count="12">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>app <span class="op">=</span> dash.Dash()</span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="co"># layout</span></span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>app.layout <span class="op">=</span> html.Div([</span>
-<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>    dcc.Input(            <span class="co"># Here we create the input field with ID 'num-multi' which has its default value has 5</span></span>
-<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>        <span class="bu">id</span><span class="op">=</span><span class="st">'num-multi'</span>,</span>
-<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>        <span class="bu">type</span><span class="op">=</span><span class="st">'number'</span>,</span>
-<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>        value<span class="op">=</span><span class="dv">5</span></span>
-<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>    ),</span>
-<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>    html.Table([                                                         <span class="co"># html.Tr makes the changes in the row</span></span>
-<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a>        html.Tr([html.Td([<span class="st">'x'</span>, html.Sup(<span class="dv">2</span>)]), html.Td(<span class="bu">id</span><span class="op">=</span><span class="st">'square'</span>)]),</span>
-<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a>        html.Tr([html.Td([<span class="st">'x'</span>, html.Sup(<span class="dv">3</span>)]), html.Td(<span class="bu">id</span><span class="op">=</span><span class="st">'cube'</span>)]),</span>
-<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a>        html.Tr([html.Td([<span class="dv">2</span>, html.Sup(<span class="st">'x'</span>)]), html.Td(<span class="bu">id</span><span class="op">=</span><span class="st">'twos'</span>)]),</span>
-<span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a>        html.Tr([html.Td([<span class="dv">3</span>, html.Sup(<span class="st">'x'</span>)]), html.Td(<span class="bu">id</span><span class="op">=</span><span class="st">'threes'</span>)]),</span>
-<span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a>        html.Tr([html.Td([<span class="st">'x'</span>, html.Sup(<span class="st">'x'</span>)]), html.Td(<span class="bu">id</span><span class="op">=</span><span class="st">'x^x'</span>)]),</span>
-<span id="cb13-15"><a href="#cb13-15" aria-hidden="true" tabindex="-1"></a>    ]),</span>
-<span id="cb13-16"><a href="#cb13-16" aria-hidden="true" tabindex="-1"></a>])</span>
-<span id="cb13-17"><a href="#cb13-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-18"><a href="#cb13-18" aria-hidden="true" tabindex="-1"></a><span class="co"># It is the callback operator, which will listen to the changes in "num-multi" input and updates five output elements.And they need to be in the same order as given in the input.</span></span>
-<span id="cb13-19"><a href="#cb13-19" aria-hidden="true" tabindex="-1"></a><span class="at">@callback</span>(</span>
-<span id="cb13-20"><a href="#cb13-20" aria-hidden="true" tabindex="-1"></a>    Output(<span class="st">'square'</span>, <span class="st">'children'</span>),</span>
-<span id="cb13-21"><a href="#cb13-21" aria-hidden="true" tabindex="-1"></a>    Output(<span class="st">'cube'</span>, <span class="st">'children'</span>),</span>
-<span id="cb13-22"><a href="#cb13-22" aria-hidden="true" tabindex="-1"></a>    Output(<span class="st">'twos'</span>, <span class="st">'children'</span>),</span>
-<span id="cb13-23"><a href="#cb13-23" aria-hidden="true" tabindex="-1"></a>    Output(<span class="st">'threes'</span>, <span class="st">'children'</span>),</span>
-<span id="cb13-24"><a href="#cb13-24" aria-hidden="true" tabindex="-1"></a>    Output(<span class="st">'x^x'</span>, <span class="st">'children'</span>),</span>
-<span id="cb13-25"><a href="#cb13-25" aria-hidden="true" tabindex="-1"></a>    Input(<span class="st">'num-multi'</span>, <span class="st">'value'</span>))</span>
-<span id="cb13-26"><a href="#cb13-26" aria-hidden="true" tabindex="-1"></a><span class="co"># THis is the callback function, this will recieve the input value from the user and return the output</span></span>
-<span id="cb13-27"><a href="#cb13-27" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> callback_a(x):   <span class="co"># x is taken to be the only input defined</span></span>
-<span id="cb13-28"><a href="#cb13-28" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> x<span class="op">**</span><span class="dv">2</span>, x<span class="op">**</span><span class="dv">3</span>, <span class="dv">2</span><span class="op">**</span>x, <span class="dv">3</span><span class="op">**</span>x, x<span class="op">**</span>x     <span class="co"># All these will go into the outputs as defined according to their order.</span></span>
-<span id="cb13-29"><a href="#cb13-29" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-30"><a href="#cb13-30" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">'__main__'</span>:</span>
-<span id="cb13-31"><a href="#cb13-31" aria-hidden="true" tabindex="-1"></a>    app.run(port<span class="op">=</span><span class="dv">5051</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>app <span class="op">=</span> dash.Dash()</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="co"># layout</span></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>app.layout <span class="op">=</span> html.Div([</span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>    dcc.Input(            <span class="co"># Here we create the input field with ID 'num-multi' which has its default value has 5</span></span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>        <span class="bu">id</span><span class="op">=</span><span class="st">'num-multi'</span>,</span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>        <span class="bu">type</span><span class="op">=</span><span class="st">'number'</span>,</span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>        value<span class="op">=</span><span class="dv">5</span></span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>    ),</span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a>    html.Table([                                                         <span class="co"># html.Tr makes the changes in the row</span></span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a>        html.Tr([html.Td([<span class="st">'x'</span>, html.Sup(<span class="dv">2</span>)]), html.Td(<span class="bu">id</span><span class="op">=</span><span class="st">'square'</span>)]),</span>
+<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a>        html.Tr([html.Td([<span class="st">'x'</span>, html.Sup(<span class="dv">3</span>)]), html.Td(<span class="bu">id</span><span class="op">=</span><span class="st">'cube'</span>)]),</span>
+<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a>        html.Tr([html.Td([<span class="dv">2</span>, html.Sup(<span class="st">'x'</span>)]), html.Td(<span class="bu">id</span><span class="op">=</span><span class="st">'twos'</span>)]),</span>
+<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a>        html.Tr([html.Td([<span class="dv">3</span>, html.Sup(<span class="st">'x'</span>)]), html.Td(<span class="bu">id</span><span class="op">=</span><span class="st">'threes'</span>)]),</span>
+<span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a>        html.Tr([html.Td([<span class="st">'x'</span>, html.Sup(<span class="st">'x'</span>)]), html.Td(<span class="bu">id</span><span class="op">=</span><span class="st">'x^x'</span>)]),</span>
+<span id="cb14-15"><a href="#cb14-15" aria-hidden="true" tabindex="-1"></a>    ]),</span>
+<span id="cb14-16"><a href="#cb14-16" aria-hidden="true" tabindex="-1"></a>])</span>
+<span id="cb14-17"><a href="#cb14-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-18"><a href="#cb14-18" aria-hidden="true" tabindex="-1"></a><span class="co"># It is the callback operator, which will listen to the changes in "num-multi" input and updates five output elements.And they need to be in the same order as given in the input.</span></span>
+<span id="cb14-19"><a href="#cb14-19" aria-hidden="true" tabindex="-1"></a><span class="at">@callback</span>(</span>
+<span id="cb14-20"><a href="#cb14-20" aria-hidden="true" tabindex="-1"></a>    Output(<span class="st">'square'</span>, <span class="st">'children'</span>),</span>
+<span id="cb14-21"><a href="#cb14-21" aria-hidden="true" tabindex="-1"></a>    Output(<span class="st">'cube'</span>, <span class="st">'children'</span>),</span>
+<span id="cb14-22"><a href="#cb14-22" aria-hidden="true" tabindex="-1"></a>    Output(<span class="st">'twos'</span>, <span class="st">'children'</span>),</span>
+<span id="cb14-23"><a href="#cb14-23" aria-hidden="true" tabindex="-1"></a>    Output(<span class="st">'threes'</span>, <span class="st">'children'</span>),</span>
+<span id="cb14-24"><a href="#cb14-24" aria-hidden="true" tabindex="-1"></a>    Output(<span class="st">'x^x'</span>, <span class="st">'children'</span>),</span>
+<span id="cb14-25"><a href="#cb14-25" aria-hidden="true" tabindex="-1"></a>    Input(<span class="st">'num-multi'</span>, <span class="st">'value'</span>))</span>
+<span id="cb14-26"><a href="#cb14-26" aria-hidden="true" tabindex="-1"></a><span class="co"># THis is the callback function, this will recieve the input value from the user and return the output</span></span>
+<span id="cb14-27"><a href="#cb14-27" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> callback_a(x):   <span class="co"># x is taken to be the only input defined</span></span>
+<span id="cb14-28"><a href="#cb14-28" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> x<span class="op">**</span><span class="dv">2</span>, x<span class="op">**</span><span class="dv">3</span>, <span class="dv">2</span><span class="op">**</span>x, <span class="dv">3</span><span class="op">**</span>x, x<span class="op">**</span>x     <span class="co"># All these will go into the outputs as defined according to their order.</span></span>
+<span id="cb14-29"><a href="#cb14-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-30"><a href="#cb14-30" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">'__main__'</span>:</span>
+<span id="cb14-31"><a href="#cb14-31" aria-hidden="true" tabindex="-1"></a>    app.run(port<span class="op">=</span><span class="dv">5051</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <script type="application/javascript">
 (async (port, path, width, height, cache, element) => {
@@ -662,53 +669,53 @@ Hands on example of using dash
 </h4>
 <p>Dash is used to make interactive apps, so here we have created an interactive graph which shows the changes as we change the input from the dropdown.</p>
 <div id="cell-59" class="cell" data-outputid="227b4a43-7dcb-4f74-90ac-6518c568e1c6" data-execution_count="4">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> dash</span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> dash <span class="im">import</span> dcc, html, Input, Output</span>
-<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> plotly.express <span class="im">as</span> px</span>
-<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.datasets <span class="im">import</span> load_iris</span>
-<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Load Iris dataset</span></span>
-<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>iris <span class="op">=</span> load_iris()</span>
-<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.DataFrame(data<span class="op">=</span>iris.data, columns<span class="op">=</span>iris.feature_names)</span>
-<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'species'</span>] <span class="op">=</span> iris.target</span>
-<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Create Dash app</span></span>
-<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a>app <span class="op">=</span> dash.Dash(<span class="va">__name__</span>)</span>
-<span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-15"><a href="#cb14-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Layout</span></span>
-<span id="cb14-16"><a href="#cb14-16" aria-hidden="true" tabindex="-1"></a>app.layout <span class="op">=</span> html.Div([</span>
-<span id="cb14-17"><a href="#cb14-17" aria-hidden="true" tabindex="-1"></a>    html.H1(<span class="st">"Iris Dataset Visualization"</span>),</span>
-<span id="cb14-18"><a href="#cb14-18" aria-hidden="true" tabindex="-1"></a>    dcc.Dropdown(</span>
-<span id="cb14-19"><a href="#cb14-19" aria-hidden="true" tabindex="-1"></a>        <span class="bu">id</span><span class="op">=</span><span class="st">'feature-dropdown'</span>,</span>
-<span id="cb14-20"><a href="#cb14-20" aria-hidden="true" tabindex="-1"></a>        options<span class="op">=</span>[</span>
-<span id="cb14-21"><a href="#cb14-21" aria-hidden="true" tabindex="-1"></a>            {<span class="st">'label'</span>: feature, <span class="st">'value'</span>: feature}</span>
-<span id="cb14-22"><a href="#cb14-22" aria-hidden="true" tabindex="-1"></a>            <span class="cf">for</span> feature <span class="kw">in</span> iris.feature_names</span>
-<span id="cb14-23"><a href="#cb14-23" aria-hidden="true" tabindex="-1"></a>        ],</span>
-<span id="cb14-24"><a href="#cb14-24" aria-hidden="true" tabindex="-1"></a>        value<span class="op">=</span>iris.feature_names[<span class="dv">0</span>]</span>
-<span id="cb14-25"><a href="#cb14-25" aria-hidden="true" tabindex="-1"></a>    ),</span>
-<span id="cb14-26"><a href="#cb14-26" aria-hidden="true" tabindex="-1"></a>    dcc.Graph(<span class="bu">id</span><span class="op">=</span><span class="st">'feature-graph'</span>)</span>
-<span id="cb14-27"><a href="#cb14-27" aria-hidden="true" tabindex="-1"></a>])</span>
-<span id="cb14-28"><a href="#cb14-28" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-29"><a href="#cb14-29" aria-hidden="true" tabindex="-1"></a><span class="co"># Callback to update graph</span></span>
-<span id="cb14-30"><a href="#cb14-30" aria-hidden="true" tabindex="-1"></a><span class="at">@app.callback</span>(</span>
-<span id="cb14-31"><a href="#cb14-31" aria-hidden="true" tabindex="-1"></a>    Output(<span class="st">'feature-graph'</span>, <span class="st">'figure'</span>),</span>
-<span id="cb14-32"><a href="#cb14-32" aria-hidden="true" tabindex="-1"></a>    [Input(<span class="st">'feature-dropdown'</span>, <span class="st">'value'</span>)]</span>
-<span id="cb14-33"><a href="#cb14-33" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb14-34"><a href="#cb14-34" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> update_graph(selected_feature):</span>
-<span id="cb14-35"><a href="#cb14-35" aria-hidden="true" tabindex="-1"></a>    fig <span class="op">=</span> px.scatter(</span>
-<span id="cb14-36"><a href="#cb14-36" aria-hidden="true" tabindex="-1"></a>        df,</span>
-<span id="cb14-37"><a href="#cb14-37" aria-hidden="true" tabindex="-1"></a>        x<span class="op">=</span>selected_feature,</span>
-<span id="cb14-38"><a href="#cb14-38" aria-hidden="true" tabindex="-1"></a>        y<span class="op">=</span><span class="st">'species'</span>,</span>
-<span id="cb14-39"><a href="#cb14-39" aria-hidden="true" tabindex="-1"></a>        color<span class="op">=</span><span class="st">'species'</span>,</span>
-<span id="cb14-40"><a href="#cb14-40" aria-hidden="true" tabindex="-1"></a>        labels<span class="op">=</span>{<span class="st">'species'</span>: <span class="st">'Species'</span>},</span>
-<span id="cb14-41"><a href="#cb14-41" aria-hidden="true" tabindex="-1"></a>        title<span class="op">=</span><span class="ss">f'</span><span class="sc">{</span>selected_feature<span class="sc">}</span><span class="ss"> vs. Species'</span></span>
-<span id="cb14-42"><a href="#cb14-42" aria-hidden="true" tabindex="-1"></a>    )</span>
-<span id="cb14-43"><a href="#cb14-43" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> fig</span>
-<span id="cb14-44"><a href="#cb14-44" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-45"><a href="#cb14-45" aria-hidden="true" tabindex="-1"></a><span class="co"># Run app</span></span>
-<span id="cb14-46"><a href="#cb14-46" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">'__main__'</span>:</span>
-<span id="cb14-47"><a href="#cb14-47" aria-hidden="true" tabindex="-1"></a>    app.run_server(debug<span class="op">=</span><span class="va">True</span>, port <span class="op">=</span> <span class="dv">1007</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> dash</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> dash <span class="im">import</span> dcc, html, Input, Output</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> plotly.express <span class="im">as</span> px</span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.datasets <span class="im">import</span> load_iris</span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Load Iris dataset</span></span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>iris <span class="op">=</span> load_iris()</span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.DataFrame(data<span class="op">=</span>iris.data, columns<span class="op">=</span>iris.feature_names)</span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'species'</span>] <span class="op">=</span> iris.target</span>
+<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Create Dash app</span></span>
+<span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a>app <span class="op">=</span> dash.Dash(<span class="va">__name__</span>)</span>
+<span id="cb15-14"><a href="#cb15-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-15"><a href="#cb15-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Layout</span></span>
+<span id="cb15-16"><a href="#cb15-16" aria-hidden="true" tabindex="-1"></a>app.layout <span class="op">=</span> html.Div([</span>
+<span id="cb15-17"><a href="#cb15-17" aria-hidden="true" tabindex="-1"></a>    html.H1(<span class="st">"Iris Dataset Visualization"</span>),</span>
+<span id="cb15-18"><a href="#cb15-18" aria-hidden="true" tabindex="-1"></a>    dcc.Dropdown(</span>
+<span id="cb15-19"><a href="#cb15-19" aria-hidden="true" tabindex="-1"></a>        <span class="bu">id</span><span class="op">=</span><span class="st">'feature-dropdown'</span>,</span>
+<span id="cb15-20"><a href="#cb15-20" aria-hidden="true" tabindex="-1"></a>        options<span class="op">=</span>[</span>
+<span id="cb15-21"><a href="#cb15-21" aria-hidden="true" tabindex="-1"></a>            {<span class="st">'label'</span>: feature, <span class="st">'value'</span>: feature}</span>
+<span id="cb15-22"><a href="#cb15-22" aria-hidden="true" tabindex="-1"></a>            <span class="cf">for</span> feature <span class="kw">in</span> iris.feature_names</span>
+<span id="cb15-23"><a href="#cb15-23" aria-hidden="true" tabindex="-1"></a>        ],</span>
+<span id="cb15-24"><a href="#cb15-24" aria-hidden="true" tabindex="-1"></a>        value<span class="op">=</span>iris.feature_names[<span class="dv">0</span>]</span>
+<span id="cb15-25"><a href="#cb15-25" aria-hidden="true" tabindex="-1"></a>    ),</span>
+<span id="cb15-26"><a href="#cb15-26" aria-hidden="true" tabindex="-1"></a>    dcc.Graph(<span class="bu">id</span><span class="op">=</span><span class="st">'feature-graph'</span>)</span>
+<span id="cb15-27"><a href="#cb15-27" aria-hidden="true" tabindex="-1"></a>])</span>
+<span id="cb15-28"><a href="#cb15-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-29"><a href="#cb15-29" aria-hidden="true" tabindex="-1"></a><span class="co"># Callback to update graph</span></span>
+<span id="cb15-30"><a href="#cb15-30" aria-hidden="true" tabindex="-1"></a><span class="at">@app.callback</span>(</span>
+<span id="cb15-31"><a href="#cb15-31" aria-hidden="true" tabindex="-1"></a>    Output(<span class="st">'feature-graph'</span>, <span class="st">'figure'</span>),</span>
+<span id="cb15-32"><a href="#cb15-32" aria-hidden="true" tabindex="-1"></a>    [Input(<span class="st">'feature-dropdown'</span>, <span class="st">'value'</span>)]</span>
+<span id="cb15-33"><a href="#cb15-33" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb15-34"><a href="#cb15-34" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> update_graph(selected_feature):</span>
+<span id="cb15-35"><a href="#cb15-35" aria-hidden="true" tabindex="-1"></a>    fig <span class="op">=</span> px.scatter(</span>
+<span id="cb15-36"><a href="#cb15-36" aria-hidden="true" tabindex="-1"></a>        df,</span>
+<span id="cb15-37"><a href="#cb15-37" aria-hidden="true" tabindex="-1"></a>        x<span class="op">=</span>selected_feature,</span>
+<span id="cb15-38"><a href="#cb15-38" aria-hidden="true" tabindex="-1"></a>        y<span class="op">=</span><span class="st">'species'</span>,</span>
+<span id="cb15-39"><a href="#cb15-39" aria-hidden="true" tabindex="-1"></a>        color<span class="op">=</span><span class="st">'species'</span>,</span>
+<span id="cb15-40"><a href="#cb15-40" aria-hidden="true" tabindex="-1"></a>        labels<span class="op">=</span>{<span class="st">'species'</span>: <span class="st">'Species'</span>},</span>
+<span id="cb15-41"><a href="#cb15-41" aria-hidden="true" tabindex="-1"></a>        title<span class="op">=</span><span class="ss">f'</span><span class="sc">{</span>selected_feature<span class="sc">}</span><span class="ss"> vs. Species'</span></span>
+<span id="cb15-42"><a href="#cb15-42" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb15-43"><a href="#cb15-43" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> fig</span>
+<span id="cb15-44"><a href="#cb15-44" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-45"><a href="#cb15-45" aria-hidden="true" tabindex="-1"></a><span class="co"># Run app</span></span>
+<span id="cb15-46"><a href="#cb15-46" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">'__main__'</span>:</span>
+<span id="cb15-47"><a href="#cb15-47" aria-hidden="true" tabindex="-1"></a>    app.run_server(debug<span class="op">=</span><span class="va">True</span>, port <span class="op">=</span> <span class="dv">1007</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <script type="application/javascript">
 (async (port, path, width, height, cache, element) => {
