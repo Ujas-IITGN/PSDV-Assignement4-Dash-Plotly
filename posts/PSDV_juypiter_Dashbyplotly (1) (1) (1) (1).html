@@ -162,7 +162,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#installing-the-dash-framework" id="toc-installing-the-dash-framework" class="nav-link active" data-scroll-target="#installing-the-dash-framework">Installing the Dash framework</a></li>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#installation-and-setup" id="toc-installation-and-setup" class="nav-link" data-scroll-target="#installation-and-setup">Installation and Setup</a></li>
+  <li><a href="#installing-the-dash-framework" id="toc-installing-the-dash-framework" class="nav-link" data-scroll-target="#installing-the-dash-framework">Installing the Dash framework</a></li>
+  <li><a href="#code-structure" id="toc-code-structure" class="nav-link" data-scroll-target="#code-structure">Code Structure</a></li>
+  <li><a href="#layout" id="toc-layout" class="nav-link" data-scroll-target="#layout">Layout</a></li>
+  <li><a href="#dash-core-components" id="toc-dash-core-components" class="nav-link" data-scroll-target="#dash-core-components">Dash core components</a></li>
+  <li><a href="#callback" id="toc-callback" class="nav-link" data-scroll-target="#callback">Callback</a></li>
+  <li><a href="#hands-on-example" id="toc-hands-on-example" class="nav-link" data-scroll-target="#hands-on-example">Hands on example</a></li>
   </ul>
 </nav>
     </div>
@@ -220,7 +227,8 @@ Dash is one of the most trusted and widely used framework for building machine l
 <h4 style="font-family: 'Arial', sans-serif;" class="anchored">
 INTRODUCTION
 </h4>
-<p>#Introduction</p>
+<section id="introduction" class="level1">
+<h1>Introduction</h1>
 <p style="text-align: justify;">
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;How can we effectively track and visualize the spread of COVID-19 in real-time, providing users with up-to-date and interactive dashboards? How can we analyze and visualize stock market trends to make informed investment decisions? How can we present complex climate change data in an accessible and engaging way to raise awareness and drive action?…..Matplotlib might be an answer, but its applications are limited and static with nearly no level of interactivity. We need something more advanced and easy to use. This is where Plotly from dash comes in…
 </p>
@@ -234,11 +242,14 @@ INTRODUCTION
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Apart from this, it is mainly used by data scientists, developers, and businesses to analyse data quickly by building an interactive dashboard where they can easily create custom, visually appealing charts and graphs with high interactivity. It provides a way to combine different representations or views of extensive data and visualise it according to the requirements due to its interactive buildup.
 </p>
 <p><h7>Note: Important links to tutorials and practice sites are given in the navigation bar above. Do check them out as you go through the blog</h7></p>
-<h4 style="font-family: 'Arial', sans-serif;" class="anchored">
+<h4 style="font-family: 'Arial', sans-serif;" class="anchored" data-anchor-id="introduction">
 INSTALLATION AND SET UP
 </h4>
-<p>#Installation and Setup</p>
+</section>
+<section id="installation-and-setup" class="level1">
+<h1>Installation and Setup</h1>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;To install dash in python you have to enter the following command in your Jupyter or Colab notebook. (Can also be ran on Command prompt if you want use Dash through Python IDEs.)</p>
+</section>
 <section id="installing-the-dash-framework" class="level1">
 <h1>Installing the Dash framework</h1>
 <p>!pip install -q dash # Installing dash_html_components which provides a set of HTML components for creating dash layouts !pip install -q dash_html_components # Installing dash_core_components, which includes core components like dropdowns, sliders, etc., for interactive elements in Dash !pip install -q dash_core_components # Installing dash_bootstrap_components, which includes advanced HTML components and can be used to make tables !pip install -q dash_bootstrap_components # Note: The -q flag is to suppress the output of a !pip command, and it’s entirely optional.</p>
@@ -259,7 +270,9 @@ INSTALLATION AND SET UP
 <h4 style="font-family: 'Arial', sans-serif;" class="anchored" data-anchor-id="installing-the-dash-framework">
 Code Structure
 </h4>
-<p>#Code Structure</p>
+</section>
+<section id="code-structure" class="level1">
+<h1>Code Structure</h1>
 <p style="text-align: justify;">
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The structure of a dash app code is divided into mainly two parts, the Layout and the Callback. The layout defines how the app will look, what all components and features would be included, etc. Anything that can be seen on the app is layout. The callback part is what makes dash apps interactive. It includes taking inputs, producing respective outputs and all the processing and functions required in between. The below code summarises what a basic dash code looks like.
 </p>
@@ -276,14 +289,16 @@ Code Structure
 <span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">'__main__'</span>:</span>
 <span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>    app.run(debug<span class="op">=</span><span class="va">True</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<h4 style="font-family: 'Arial', sans-serif;" class="anchored">
+<h4 style="font-family: 'Arial', sans-serif;" class="anchored" data-anchor-id="code-structure">
 LAYOUT
 </h4>
-<p>#Layout</p>
+</section>
+<section id="layout" class="level1">
+<h1>Layout</h1>
 <p style="text-align: justify;">
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Layout is the structure of the web app we are developing. It shows which and where the elements like graphs, text button, input and output will be shown. Dash is a web app framework that provides pure Python abstraction around HTML, CSS, and JavaScript. Instead of writing in HTML, you can compose your layout using Python with the Dash HTML Components module (dash.html), and the components of the app would be defined by the dash-core-components. Lets take a deeper look upon this:
 </p>
-<h5 style="font-family: 'Arial', sans-serif;" class="anchored">
+<h5 style="font-family: 'Arial', sans-serif;" class="anchored" data-anchor-id="layout">
 DASH-HTML-COMPONENTS
 </h5>
 <p style="text-align: justify;">
@@ -292,7 +307,9 @@ DASH-HTML-COMPONENTS
 <h5 style="font-family: 'Arial', sans-serif;" class="anchored">
 DASH-CORE-COMPONENTS
 </h5>
-<p>#Dash core components</p>
+</section>
+<section id="dash-core-components" class="level1">
+<h1>Dash core components</h1>
 <p style="text-align: justify;">
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lets see some of the different dash features which we create use using dash-core-components, includeing basic features like dropdown, sliders, checklists and interactive graphs. The Dash Core Components module (dash.dcc) gives you access to many interactive components, including dropdowns, checklists, and sliders. This all may be done for reading some large data sets, or building app layouts, and to produce components for giving back the output using callback (Callbacks are defined functionality within an app that are triggered by user interaction. More on it further down.)
 </p>
@@ -601,10 +618,12 @@ Output
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>style<span class="op">=</span>{<span class="st">'width'</span>: <span class="st">'49%'</span>, <span class="st">'display'</span>: <span class="st">'inline-block'</span>, <span class="st">'padding'</span>: <span class="st">'0 20'</span>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Don’t forget do refer the official tutorial and continue learning about new components in layouts….there are a plenty.</p>
-<h4 style="font-family: 'Arial', sans-serif;" class="anchored">
+<h4 style="font-family: 'Arial', sans-serif;" class="anchored" data-anchor-id="dash-core-components">
 CALLBACK
 </h4>
-<p>#Callback</p>
+</section>
+<section id="callback" class="level1">
+<h1>Callback</h1>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Callback is the interactivity in the dash app. It connects the components from the layout part of the code to the output making it interactive for the user. Callback is made of 2 different sections: callback decorator and callback function.</p>
 <h5 style="font-family: 'Arial', sans-serif;" class="anchored">
 Callback Decorator:
@@ -700,10 +719,12 @@ Output
 <li><p>We then specify the callback decorator, which includes input and output components. The input component identifies the <code>id</code> and <code>value</code>, and it listens for changes in the input number. The output component indicates which table cell will be updated in response to these changes.</p></li>
 <li><p>Finally, we implement the callback function. This function is automatically triggered whenever the user inputs a new number, and it produces the corresponding output.</p></li>
 </ol>
-<h4 style="font-family: 'Arial', sans-serif;" class="anchored">
+<h4 style="font-family: 'Arial', sans-serif;" class="anchored" data-anchor-id="callback">
 Hands on example of using dash
 </h4>
-<p>#Hands on example</p>
+</section>
+<section id="hands-on-example" class="level1">
+<h1>Hands on example</h1>
 <p>Dash is used to make interactive apps, so here we have created an interactive graph which shows the changes as we change the input from the dropdown.</p>
 <div id="cell-73" class="cell" data-outputid="227b4a43-7dcb-4f74-90ac-6518c568e1c6" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> dash</span>
@@ -791,7 +812,7 @@ Output
 <p><br></p>
 <p>This is a simple dash code that interactively displays a scatter plot of the selected feature against the species. The dropdown allows you to select different features from the Iris dataset, and the graph updates accordingly.</p>
 <p>If you wish to make good and proper dash apps, you will have to use python IDES instead of jupyter or colab. In that case, upon saving and running the code, you will get a url like http://127.0.0.1:8050/ (8050 is the port, it is the default port but you can change it as discussed earlier) where your dash app will be running live.</p>
-<h4 style="font-family: 'Arial', sans-serif;" class="anchored">
+<h4 style="font-family: 'Arial', sans-serif;" class="anchored" data-anchor-id="hands-on-example">
 Conclusion
 </h4>
 <p>What we have seen till now is just a glimpse of what you can do with dash from plotly. It has numerous more beautiful and engaging components. So don’t forget to keep referring to the official tutorial and continue learning more dash functions and objects.</p>
